@@ -1,0 +1,46 @@
+title: "Geo-UAV"
+logo: ./content/assets/geo_mod-01.png
+author: Nil Rodes, Peter Betlem, Sara M. Cohen
+copyright: "2023 (CC-BY-NC except where otherwise stated)"
+
+repository:
+  url: https://github.com/UNISvalbard/Geo-UAV
+  branch: main
+
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+  extra_navbar: ""
+  use_edit_page_button: true
+  announcement: 'Found this tutorial helpful? Please Star me! <a href="https://github.com/UNISvalbard/Geo-UAV"> <img src="https://img.shields.io/github/stars/UNISvalbard/Geo-UAV"></a>'
+  home_page_in_navbar: true
+  comments:
+    hypothesis: true
+
+launch_buttons:
+  binderhub_url: ""
+
+execute:
+  execute_notebooks: "auto"
+
+parse:
+  myst_header_anchors: 4
+  myst_enable_extensions:
+    - "amsmath"
+    - "dollarmath"
+
+sphinx:
+  config:
+    #bibtex_reference_style: author_year
+    bibtex_default_style: plain
+
+only_build_toc_files: true
+
+bibtex_bibfiles: "bibliography.bib"
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    html_extra_path:
+      - extra
