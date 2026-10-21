@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Recovery &#8212; Trilobite OBS Manual</title>
+    <title>Stopping the Trilobite and retrieving the Data &#8212; Trilobite OBS Manual</title>
   
   
   
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Data download and processing" href="06_data.html" />
-    <link rel="prev" title="Deployment at sea" href="04_deployment.html" />
+    <link rel="next" title="Downloading and Converting the Data" href="06_data.html" />
+    <link rel="prev" title="Connecting the Trilobite and Start Data Collection" href="04_deployment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -153,6 +153,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -216,12 +220,12 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Introduction: what is a Trilobite OBS?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Instructions on Operating Trilobites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_components.html">Components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Preparation on land</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Deployment at sea</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Recovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_data.html">Data download and processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Setup of Hardware and Batteries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobite and Start Data Collection</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Stopping the Trilobite and retrieving the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_data.html">Downloading and Converting the Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_checklists.html">Checklists</a></li>
 </ul>
 
@@ -392,7 +396,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -403,11 +409,19 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Recovery</h1>
+    <h1>Stopping the Trilobite and retrieving the Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopping-the-trilobite-and-correcting-the-time">Stopping the Trilobite and correcting the time</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -417,13 +431,42 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="recovery">
-<span id="id1"></span><h1>Recovery<a class="headerlink" href="#recovery" title="Link to this heading">#</a></h1>
-<p>Your text goes here.</p>
-<div class="tip admonition">
-<p class="admonition-title">Note</p>
-<p>This is what a note box looks like. Use <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">warning</span></code> for an orange one.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="stopping-the-trilobite-and-retrieving-the-data">
+<span id="recovery"></span><h1>Stopping the Trilobite and retrieving the Data<a class="headerlink" href="#stopping-the-trilobite-and-retrieving-the-data" title="Link to this heading">#</a></h1>
+<p>Hardware you need:</p>
+<ul class="simple">
+<li><p>Blue Motherboard/Control Unit</p></li>
+<li><p>GPS antenna with cable</p></li>
+<li><p>2 COM to USB cable</p></li>
+<li><p>Data to USB cable</p></li>
+<li><p>The R-Puck</p></li>
+<li><p>The UNIS Geophone Laptop</p></li>
+<li><p>6 mm Hex Allen Key</p></li>
+</ul>
+<p>Software you need (should be on the Laptop):</p>
+<ul class="simple">
+<li><p>EDR208</p></li>
+<li><p>Notepad ++</p></li>
+<li><p>Windows Powershell</p></li>
+</ul>
+<section id="stopping-the-trilobite-and-correcting-the-time">
+<h2>Stopping the Trilobite and correcting the time<a class="headerlink" href="#stopping-the-trilobite-and-correcting-the-time" title="Link to this heading">#</a></h2>
+<p>This step is needed to correct the internal clock of the Trilobite which has a little bit of a drift especially after long deployments.</p>
+<ol class="arabic simple">
+<li><p>Setup everything as in the chapter before: Connect all cables, locate the GPS, let it calibrate for 30 minutes and connect the laptop.</p></li>
+<li><p>Start the EDR as Administrator and place the R-Puck on the Geophone. You can press “Send” and “Inq_Recording” to make sure it is still recording.</p></li>
+<li><p>Go to the panel “Script/Log” and create a stopping Log-file that will store important information that you might need later.</p></li>
+<li><p>Now load the file “Svalbard_STOP_rec” and press “Open”.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image33.png"><img alt="../../_images/word_image33.png" src="../../_images/word_image33.png" style="width: 409px;" />
+</a>
+<ol class="arabic simple" start="5">
+<li><p>Again, set the delay to 2 seconds and press “Send”. Wait until everything has run.</p></li>
+<li><p>The recording should now be set to inactive. You can check again by “Inq_Recording” as previously explained.</p></li>
+<li><p>You can now remove the R-Puck and turn of the blue control unit, disconnect the laptop and all other wires.</p></li>
+<li><p>Finally, take of the hood of the Trilobite and disconnect the batteries. Put the white plastic caps back on the wires and battery compartments.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -462,7 +505,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Deployment at sea</p>
+        <p class="prev-next-title">Connecting the Trilobite and Start Data Collection</p>
       </div>
     </a>
     <a class="right-next"
@@ -470,7 +513,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data download and processing</p>
+        <p class="prev-next-title">Downloading and Converting the Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -480,6 +523,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopping-the-trilobite-and-correcting-the-time">Stopping the Trilobite and correcting the time</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

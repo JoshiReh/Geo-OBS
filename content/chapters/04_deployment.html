@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Deployment at sea &#8212; Trilobite OBS Manual</title>
+    <title>Connecting the Trilobite and Start Data Collection &#8212; Trilobite OBS Manual</title>
   
   
   
@@ -64,8 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Recovery" href="05_recovery.html" />
-    <link rel="prev" title="Preparation on land" href="03_preparation.html" />
+    <link rel="next" title="Stopping the Trilobite and retrieving the Data" href="05_recovery.html" />
+    <link rel="prev" title="Setup of Hardware and Batteries" href="03_preparation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -153,6 +153,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -216,12 +220,12 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Introduction: what is a Trilobite OBS?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Instructions on Operating Trilobites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_components.html">Components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Preparation on land</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Deployment at sea</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Recovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_data.html">Data download and processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Setup of Hardware and Batteries</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Connecting the Trilobite and Start Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobite and retrieving the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_data.html">Downloading and Converting the Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_checklists.html">Checklists</a></li>
 </ul>
 
@@ -392,7 +396,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -403,11 +409,20 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Deployment at sea</h1>
+    <h1>Connecting the Trilobite and Start Data Collection</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-connection">Establishing Connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-recording">Starting the Recording</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -417,13 +432,125 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="deployment-at-sea">
-<span id="deployment"></span><h1>Deployment at sea<a class="headerlink" href="#deployment-at-sea" title="Link to this heading">#</a></h1>
-<p>Your text goes here.</p>
-<div class="tip admonition">
-<p class="admonition-title">Note</p>
-<p>This is what a note box looks like. Use <code class="docutils literal notranslate"><span class="pre">:class:</span> <span class="pre">warning</span></code> for an orange one.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="connecting-the-trilobite-and-start-data-collection">
+<span id="deployment"></span><h1>Connecting the Trilobite and Start Data Collection<a class="headerlink" href="#connecting-the-trilobite-and-start-data-collection" title="Link to this heading">#</a></h1>
+<p>Hardware you need:</p>
+<ul class="simple">
+<li><p>Blue Motherboard/Control Unit</p></li>
+<li><p>GPS antenna with cable</p></li>
+<li><p>2 COM to USB cable</p></li>
+<li><p>The R-Puck</p></li>
+<li><p>The UNIS Geophone Laptop</p></li>
+<li><p>6 mm Hex Allen Key</p></li>
+<li><p>Pliers</p></li>
+</ul>
+<p>Software you need (should be on the Laptop):</p>
+<ul class="simple">
+<li><p>EDR208</p></li>
+<li><p>Notepad ++</p></li>
+</ul>
+<section id="establishing-connection">
+<h2>Establishing Connection<a class="headerlink" href="#establishing-connection" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Start by laying out all the devices and cables:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image12.jpg"><img alt="../../_images/word_image12.jpg" src="../../_images/word_image12.jpg" style="width: 535px;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>Connect cables as shown and press the “ON-Button” on the back-side of the Control Unit. Make sure, that the cable with the Zip-Tie goes in the correct spot</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image13.jpg"><img alt="../../_images/word_image13.jpg" src="../../_images/word_image13.jpg" style="width: 412px;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/word_image14.jpg"><img alt="../../_images/word_image14.jpg" src="../../_images/word_image14.jpg" style="width: 412px;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Place the GPS-Receiver outside. When it catches signal there is a green light pulsing on the far left of the board.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image16.jpg"><img alt="../../_images/word_image16.jpg" src="../../_images/word_image16.jpg" style="width: 240px;" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p>The Control Unit should now look like this:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image18.jpg"><img alt="../../_images/word_image18.jpg" src="../../_images/word_image18.jpg" style="width: 171px;" />
+</a>
+<ol class="arabic simple" start="5">
+<li><p>Connect the R-Puck to the front of the Motherboard. It can only go on one way and is secured with a lock ring.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image20.jpg"><img alt="../../_images/word_image20.jpg" src="../../_images/word_image20.jpg" style="width: 360px;" />
+</a>
+<ol class="arabic simple" start="6">
+<li><p>Also connect the Laptop to the USB cable. Chose the USB-Port on the <strong>left</strong> side of the Laptop!!!</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image21.jpg"><img alt="../../_images/word_image21.jpg" src="../../_images/word_image21.jpg" style="width: 424px;" />
+</a>
+<ol class="arabic simple" start="7">
+<li><p>Open EDR208 and apply the following options:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image22.jpg"><img alt="../../_images/word_image22.jpg" src="../../_images/word_image22.jpg" style="width: 273px;" />
+</a>
+<p>To calibrate the GPS the entire system should now rest active for at least 30 minutes before continuing. In the meantime:</p>
+<ol class="arabic simple" start="8">
+<li><p>Lift up the hood of the trilobite as explained in the previous chapter and pop of the white plastic caps of the battery housings and cables. Especially for the cable you might need a good pair of pliers.</p></li>
+<li><p>Make sure that there is an O-ring on both, the battery compartment and the cable as shown in the picture</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image23.jpg"><img alt="../../_images/word_image23.jpg" src="../../_images/word_image23.jpg" style="width: 329px;" />
+</a>
+<ol class="arabic simple" start="10">
+<li><p>Connect the cables as shown, they can only go on one way. Press them on firmly and secure them with the copper nut. There shouldn’t be any visible threats left.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image24.jpg"><img alt="../../_images/word_image24.jpg" src="../../_images/word_image24.jpg" style="width: 164px;" />
+</a>
+<ol class="arabic simple" start="11">
+<li><p>After that you can take the R-Puck and place it on top of the Trilobite like shown. A red light should flash and blink every couple of seconds. You may need to press the button on the side of the R-Puck to activate it.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image25.jpg"><img alt="../../_images/word_image25.jpg" src="../../_images/word_image25.jpg" style="width: 350px;" />
+</a>
+<ol class="arabic simple" start="12">
+<li><p>Go into the EDR-program and press “Send” and then “Inq_Revs” in the current panel.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image26.jpg"><img alt="../../_images/word_image26.jpg" src="../../_images/word_image26.jpg" style="width: 479px;" />
+</a>
+<ol class="arabic simple" start="13">
+<li><p>Following output should appear, showing you the Firmware and Serial Number and some other stuff.</p></li>
+</ol>
+<p><strong>Sometimes that does not work and you only get the first 2 lines, in that case remove the R-Puck and restart the blue control unit and EDR. Note that EDR should be run as Administrator at any time!</strong></p>
+<a class="reference internal image-reference" href="../../_images/word_image27.jpg"><img alt="../../_images/word_image27.jpg" src="../../_images/word_image27.jpg" style="width: 356px;" />
+</a>
+<ol class="arabic simple" start="14">
+<li><p>You can also press “Send” and then “Inq_vTemp” to get information about temperature and voltage. If the aforementioned outputs worked it means that the connection is established successfully. At this point all lights should be green on the control unit.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image28.jpg"><img alt="../../_images/word_image28.jpg" src="../../_images/word_image28.jpg" style="width: 180px;" />
+</a>
+</section>
+<section id="starting-the-recording">
+<h2>Starting the Recording<a class="headerlink" href="#starting-the-recording" title="Link to this heading">#</a></h2>
+<ol class="arabic simple" start="15">
+<li><p>Go to the panel Script/Log in EDR</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image29.jpg"><img alt="../../_images/word_image29.jpg" src="../../_images/word_image29.jpg" style="width: 277px;" />
+</a>
+<ol class="arabic simple" start="16">
+<li><p>Press “Open Log file” and create a Log file in a folder you desire, ideally calling it something like “Start_1069_Log”. This will just save some commands so you get information about the sampling rate you chose, the temperature and voltage in the beginning and the moment where you started the recording that can be important when working with the data.</p></li>
+<li><p>Press “Send” and select the file “Svalbard_START_rec” in the “Trilobit”-folder.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image30.png"><img alt="../../_images/word_image30.png" src="../../_images/word_image30.png" style="width: 347px;" />
+</a>
+<ol class="arabic simple" start="18">
+<li><p>Finally Set the <em>Seconds Delay between each Script Command</em> to “2”. This will make sure that all scripts for starting and operating the Trilobite will be read in correctly.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image31.jpg"><img alt="../../_images/word_image31.jpg" src="../../_images/word_image31.jpg" style="width: 305px;" />
+</a>
+<ol class="arabic simple" start="19">
+<li><p>Press “Send” and <strong>wait</strong> until you get this output about 3 times:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/word_image32.jpg"><img alt="../../_images/word_image32.jpg" src="../../_images/word_image32.jpg" style="width: 184px;" />
+</a>
+<ol class="arabic simple" start="20">
+<li><p>Your Trilobite is now running and you can press “Close Log File”. To double check you can go into the start panel “EDR Cmd” and “Send” “Inq_Recording”, which will show you again if the recording is active (in UTC).</p></li>
+<li><p>You can now lift up the R-Puck and either start programming the next Trilobite or turn of the control unit and your laptop.</p></li>
+</ol>
+<p><em>Just for your reference I would recommend that you write down the <strong>start time</strong> yourself and especially the <strong>deployment</strong>- and the <strong>pick-up</strong> time. You will need that for your data processing.</em></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -462,7 +589,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Preparation on land</p>
+        <p class="prev-next-title">Setup of Hardware and Batteries</p>
       </div>
     </a>
     <a class="right-next"
@@ -470,7 +597,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Recovery</p>
+        <p class="prev-next-title">Stopping the Trilobite and retrieving the Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -480,6 +607,24 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-connection">Establishing Connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-recording">Starting the Recording</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
