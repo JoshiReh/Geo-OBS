@@ -1,9 +1,6 @@
 (01_introduction)=
-# Introduction: what is a Trilobite OBS?
+# Instructions on Operating Trilobites
 
-Your text goes here.
+The following document is a step-by-step guide to set up-, start-, end a trilobite and downloading and processing the data from RAW into SEG-Y files.
 
-```{admonition} Note
-:class: tip
-This is what a note box looks like. Use `:class: warning` for an orange one.
-```
+The instructions are given in great detail and should be absolutely sufficient to operate the trilobite. Please follow each and every step precisely.
