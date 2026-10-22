@@ -159,14 +159,5 @@ In the meantime, you can use the software “SeiSee” which is installed on the
 :width: 442px
 ```
 
-```{image} assets/word_image53.png
-:width: 400px
-```
 
-```{image} assets/word_image54.png
-:width: 400px
-```
 
-```{image} assets/word_image55.png
-:width: 400px
-```
