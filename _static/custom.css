@@ -1,0 +1,18 @@
+/* Funding section on the landing page: logos same size, text vertically centred next to them */
+.funding-logo,
+.funding-text {
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+.funding-logo {
+  justify-content: center;
+}
+.funding-logo img {
+  width: 200px;
+  height: 70px;
+  object-fit: contain;
+}
+.funding-text p {
+  margin: 0;
+}
