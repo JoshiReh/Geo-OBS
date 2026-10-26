@@ -1,4 +1,4 @@
-# Trilobite OBS Manual
+# Geo-OBS: Trilobit Ocean Bottom Seismometer Manual
 
 A Jupyter Book. Build locally with:
 

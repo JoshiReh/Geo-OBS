@@ -1,9 +1,10 @@
-title: "Trilobite OBS Manual"
-author: "DEIN NAME"
+title: "Geo-OBS"
+author: "Joshua Rehlinghaus"
 copyright: "2026"
+logo: content/assets/trilobit_icon.png
 
 repository:
-  url: https://github.com/JoshiReh/Trilobit-OBS-Manual
+  url: https://github.com/JoshiReh/Geo-OBS
   branch: main
 
 html:
