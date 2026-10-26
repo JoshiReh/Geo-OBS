@@ -127,31 +127,10 @@ If your file is **larger** then 2GB the following steps are not relevant and you
 :width: 393px
 ```
 
-(06_chunking)=
-## Chunking Files that are larger than 2 GB
-
-You should have a file that is already fixed with the command fix_all_ln as explained in step 1-8 in the previous chapter. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.
-
-1.  In your “data” folder, create a folder calling it for example like the Trilobite you want to analyze the data from. In my example it is “01069”. Put the fixed Raw file into this folder.
-
-2.  In this folder create folders you name “01069_1stChunk”, “01069_2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each containing 4 components that are xxx
-
-3.  Go into the EDR program and in the “Scan Raw” panel select “Extract raw”.
-
-4.  Select the time and date for your first Chunk e.g. 10 days. (Here I would recommend to start at a time that will be your starting time across all Data analysis. We deployed the Trilobites at 14:32 o’clock and I set the start time to 14:00 UTC, so 16:00 in Svalbard time to let the sediment settle)
-
-5.  Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 01069_1stChunk and create a new file and name it the same way. Press “send/okay”.
-
-6.  Wait until that has worked and repeat the last 3 steps for the 01069_2ndChunk by changing the time to the next 10 days.
-
-7.  Repeat for all chunks until your previous raw-file is chunked into 3 smaller chunked files.
-
-8.  After you have chunked the entire file go back into the previous chapter and follow steps 9-17! **You will have to do it separately for each Chunk.**
-
 (06_displaying)=
 ## Displaying the Data
 
-UNIS has a license to the GeoGiga Software in Computer Lab 2, which is commonly used for showing and analyzing seismic data. However, GeoGiga is unfortunately not opening the files produced by EDR208 because the “Binary-Header” is writing false values into the file. For repairing the data, we have developed a python script that is repairing the data and can be accessed here.
+UNIS has a license to the GeoGiga Software in Computer Lab 2, which is commonly used for showing and analyzing seismic data. However, GeoGiga is unfortunately not opening the files produced by EDR208 because the “Binary-Header” is writing false values into the file. For repairing the data, we have developed a python script that is repairing the data, see {ref}`08_binary_header`.
 
 In the meantime, you can use the software “SeiSee” which is installed on the Laptop. The data sometimes does not appear directly in the view-panel or it looks broken. Try to experiment with these parameters:
 

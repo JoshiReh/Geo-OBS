@@ -64,7 +64,7 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Checklists" href="07_checklists.html" />
+    <link rel="next" title="Chunking Files that are larger than 2 GB" href="06_chunking.html" />
     <link rel="prev" title="Stopping the Trilobite and retrieving the Data" href="05_recovery.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -239,9 +239,22 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobite and retrieving the Data</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Data processing</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and cleaning data</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Downloading and Converting the Data</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Downloading and Converting the Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="06_chunking.html">Chunking Files that are larger than 2 GB</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Processing with Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08b_xyz_conversion.html">X, Y, Z Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08c_segy_daily.html">Cutting Long-Term SEG-Y Files into Daily Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08d_segy_qc.html">SEG-Y QC Explorer</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SUPPLEMENTARY</span></p>
 <ul class="nav bd-sidenav">
@@ -250,7 +263,6 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">External Links</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://unisvalbard.github.io/ebooks/">UNIS Compendium Portal</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://unisvalbard.github.io/Geo-UAV/">Geo-UAV</a></li>
 </ul>
 
     </div>
@@ -460,7 +472,6 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-files-that-are-larger-than-2-gb">Chunking Files that are larger than 2 GB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaying-the-data">Displaying the Data</a></li>
 </ul>
             </nav>
@@ -521,7 +532,7 @@
 <ol class="arabic simple" start="8">
 <li><p>As seen in the last picture write “.\fix_all_ln.ps1” and press “enter”. This will create a new file that has exactly the same name as you named it and will re-name your original file into “old_xxx”. In my case my file is still called “Demonstration” but I also have the file “old_demonstration” which I can <strong>delete</strong>. You may have to type «*Set-*<em>ExecutionPolicy Unrestricted</em>” in the powershell when an error occurs before trying again.</p></li>
 </ol>
-<p>If your file is <strong>larger</strong> then 2GB the following steps are not relevant and you have to <strong>Chunk</strong> the file into subfiles, which is explained in <a class="reference internal" href="#chunking"><span class="std std-ref">Chunking Files that are larger than 2 GB</span></a>!</p>
+<p>If your file is <strong>larger</strong> then 2GB the following steps are not relevant and you have to <strong>Chunk</strong> the file into subfiles, which is explained in <a class="reference internal" href="06_chunking.html#chunking"><span class="std std-ref">Chunking Files that are larger than 2 GB</span></a>!</p>
 <ol class="arabic simple" start="9">
 <li><p>Go back into EDR. Still in the panel “Raw Dev” set the “Operation” to “Scan Raw” and select your raw dataset as you named it in Step 4.</p></li>
 <li><p>The panel in EDR should show you when the dataset started and when it stopped.</p></li>
@@ -573,27 +584,15 @@
 </a>
 <a class="reference internal image-reference" href="../../_images/word_image51.jpg"><img alt="../../_images/word_image51.jpg" src="../../_images/word_image51.jpg" style="width: 393px;" />
 </a>
-<section id="chunking-files-that-are-larger-than-2-gb">
-<span id="chunking"></span><h2>Chunking Files that are larger than 2 GB<a class="headerlink" href="#chunking-files-that-are-larger-than-2-gb" title="Link to this heading">#</a></h2>
-<p>You should have a file that is already fixed with the command fix_all_ln as explained in step 1-8 in the previous chapter. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.</p>
-<ol class="arabic simple">
-<li><p>In your “data” folder, create a folder calling it for example like the Trilobite you want to analyze the data from. In my example it is “01069”. Put the fixed Raw file into this folder.</p></li>
-<li><p>In this folder create folders you name “01069_1stChunk”, “01069_2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each containing 4 components that are xxx</p></li>
-<li><p>Go into the EDR program and in the “Scan Raw” panel select “Extract raw”.</p></li>
-<li><p>Select the time and date for your first Chunk e.g. 10 days. (Here I would recommend to start at a time that will be your starting time across all Data analysis. We deployed the Trilobites at 14:32 o’clock and I set the start time to 14:00 UTC, so 16:00 in Svalbard time to let the sediment settle)</p></li>
-<li><p>Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 01069_1stChunk and create a new file and name it the same way. Press “send/okay”.</p></li>
-<li><p>Wait until that has worked and repeat the last 3 steps for the 01069_2ndChunk by changing the time to the next 10 days.</p></li>
-<li><p>Repeat for all chunks until your previous raw-file is chunked into 3 smaller chunked files.</p></li>
-<li><p>After you have chunked the entire file go back into the previous chapter and follow steps 9-17! <strong>You will have to do it separately for each Chunk.</strong></p></li>
-</ol>
-</section>
 <section id="displaying-the-data">
 <span id="displaying"></span><h2>Displaying the Data<a class="headerlink" href="#displaying-the-data" title="Link to this heading">#</a></h2>
-<p>UNIS has a license to the GeoGiga Software in Computer Lab 2, which is commonly used for showing and analyzing seismic data. However, GeoGiga is unfortunately not opening the files produced by EDR208 because the “Binary-Header” is writing false values into the file. For repairing the data, we have developed a python script that is repairing the data and can be accessed here.</p>
+<p>UNIS has a license to the GeoGiga Software in Computer Lab 2, which is commonly used for showing and analyzing seismic data. However, GeoGiga is unfortunately not opening the files produced by EDR208 because the “Binary-Header” is writing false values into the file. For repairing the data, we have developed a python script that is repairing the data, see <a class="reference internal" href="08a_binary_header.html#binary-header"><span class="std std-ref">Binary Header Correction for GeoGiga</span></a>.</p>
 <p>In the meantime, you can use the software “SeiSee” which is installed on the Laptop. The data sometimes does not appear directly in the view-panel or it looks broken. Try to experiment with these parameters:</p>
 <a class="reference internal image-reference" href="../../_images/word_image52.jpg"><img alt="../../_images/word_image52.jpg" src="../../_images/word_image52.jpg" style="width: 442px;" />
 </a>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -636,11 +635,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="07_checklists.html"
+       href="06_chunking.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Checklists</p>
+        <p class="prev-next-title">Chunking Files that are larger than 2 GB</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -662,7 +661,6 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-files-that-are-larger-than-2-gb">Chunking Files that are larger than 2 GB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaying-the-data">Displaying the Data</a></li>
 </ul>
   </nav></div>

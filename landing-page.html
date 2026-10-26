@@ -240,9 +240,22 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="content/chapters/05_recovery.html">Stopping the Trilobite and retrieving the Data</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Data processing</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and cleaning data</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="content/chapters/06_data.html">Downloading and Converting the Data</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="content/chapters/06_data.html">Downloading and Converting the Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/chapters/06_chunking.html">Chunking Files that are larger than 2 GB</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Processing with Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="content/chapters/08_python_processing.html">Processing the Data with Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/chapters/08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/chapters/08b_xyz_conversion.html">X, Y, Z Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/chapters/08c_segy_daily.html">Cutting Long-Term SEG-Y Files into Daily Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/chapters/08d_segy_qc.html">SEG-Y QC Explorer</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SUPPLEMENTARY</span></p>
 <ul class="nav bd-sidenav">
@@ -251,7 +264,6 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">External Links</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://unisvalbard.github.io/ebooks/">UNIS Compendium Portal</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://unisvalbard.github.io/Geo-UAV/">Geo-UAV</a></li>
 </ul>
 
     </div>
@@ -509,7 +521,8 @@
 <li><p>Session 1: <a class="reference internal" href="content/chapters/03_preparation.html#preparation"><span class="std std-ref">Setup of Hardware and Batteries</span></a></p></li>
 <li><p>Session 2: <a class="reference internal" href="content/chapters/04_deployment.html#deployment"><span class="std std-ref">Connecting the Trilobite and Start Data Collection</span></a></p></li>
 <li><p>Session 3: <a class="reference internal" href="content/chapters/05_recovery.html#recovery"><span class="std std-ref">Stopping the Trilobite and retrieving the Data</span></a></p></li>
-<li><p>Session 4: <a class="reference internal" href="content/chapters/06_data.html#data"><span class="std std-ref">Downloading and Converting the Data</span></a></p></li>
+<li><p>Session 4: Decoding and cleaning data (<a class="reference internal" href="content/chapters/06_data.html#data"><span class="std std-ref">Downloading and Converting the Data</span></a>, <a class="reference internal" href="content/chapters/06_chunking.html#chunking"><span class="std std-ref">Chunking Files that are larger than 2 GB</span></a>)</p></li>
+<li><p>Session 5: <a class="reference internal" href="content/chapters/08_python_processing.html#python-processing"><span class="std std-ref">Processing the Data with Python</span></a> (binary header correction, x, y, z conversion, daily files, QC explorer)</p></li>
 <li><p>Supplementary: <a class="reference internal" href="content/chapters/07_checklists.html#checklists"><span class="std std-ref">Checklists</span></a></p></li>
 </ul>
 </section>
@@ -522,6 +535,7 @@
 <li><p>✔️ Stop the Trilobite and correct the time after recovery</p></li>
 <li><p>✔️ Download the RAW data and convert it into SEG-Y files</p></li>
 <li><p>✔️ Display the recorded data</p></li>
+<li><p>✔️ Process the data with Python: fix the binary header, convert to x, y, z and cut daily files</p></li>
 </ul>
 </section>
 <section id="project-status">
@@ -568,6 +582,8 @@ Once connected, feel free to open an issue, whether suggesting improvements or h
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 </section>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
