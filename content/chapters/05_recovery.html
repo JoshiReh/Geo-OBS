@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Stopping the Recording and Retrieving the Data &#8212; Geo-OBS</title>
+    <title>Stopping the Trilobit and Correcting the Time &#8212; Geo-OBS</title>
   
   
   
@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Downloading and Converting the Data" href="06_data.html" />
-    <link rel="prev" title="Connecting the Trilobit and Start Recording" href="04_deployment.html" />
+    <link rel="next" title="Downloading the Raw Data" href="06_data.html" />
+    <link rel="prev" title="Deploying the Trilobit at Sea" href="05a_field_deployment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -157,10 +157,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -232,22 +228,30 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Setup of Hardware and Batteries</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Deployment</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Start Recording</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Recording</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Recovery</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Stopping the Recording and Retrieving the Data</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and Cleaning Data</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="06_data.html">Downloading and Converting the Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="06_chunking.html">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Recording</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04b_start_recording.html">Starting the Recording</a></li>
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Processing with Python</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Field Deployment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05a_field_deployment.html">Deploying the Trilobit at Sea</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Recovery</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Stopping the Trilobit and Correcting the Time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Downloading, Decoding and Converting the Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06_data.html">Downloading the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06b_decoding.html">Decoding the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06c_segy.html">Converting the Data into SEG-Y Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_chunking.html">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06d_displaying.html">Displaying the Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
@@ -451,9 +455,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -464,19 +466,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Stopping the Recording and Retrieving the Data</h1>
+    <h1>Stopping the Trilobit and Correcting the Time</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopping-the-trilobit-and-correcting-the-time">Stopping the Trilobit and Correcting the Time</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -486,8 +480,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="stopping-the-recording-and-retrieving-the-data">
-<span id="recovery"></span><h1>Stopping the Recording and Retrieving the Data<a class="headerlink" href="#stopping-the-recording-and-retrieving-the-data" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="stopping-the-trilobit-and-correcting-the-time">
+<span id="recovery"></span><h1>Stopping the Trilobit and Correcting the Time<a class="headerlink" href="#stopping-the-trilobit-and-correcting-the-time" title="Link to this heading">#</a></h1>
 <div class="tip admonition">
 <p class="admonition-title">What You Need</p>
 <p><strong>Hardware</strong></p>
@@ -507,11 +501,9 @@
 <li><p>Windows Powershell</p></li>
 </ul>
 </div>
-<section id="stopping-the-trilobit-and-correcting-the-time">
-<h2>Stopping the Trilobit and Correcting the Time<a class="headerlink" href="#stopping-the-trilobit-and-correcting-the-time" title="Link to this heading">#</a></h2>
 <p>This step is needed to correct the internal clock of the Trilobit which has a little bit of a drift especially after long deployments.</p>
 <ol class="arabic simple">
-<li><p>Setup everything as in the chapter before: Connect all cables, locate the GPS, let it calibrate for 30 minutes and connect the laptop.</p></li>
+<li><p>Setup everything as in <a class="reference internal" href="04_deployment.html#deployment"><span class="std std-ref">Connecting the Trilobit and Start Recording</span></a>: Connect all cables, locate the GPS, let it calibrate for 30 minutes and connect the laptop.</p></li>
 <li><p>Start the EDR as Administrator and place the R-Puck on the Geophone. You can press “Send” and “Inq_Recording” to make sure it is still recording.</p></li>
 <li><p>Go to the panel “Script/Log” and create a stopping Log-file that will store important information that you might need later.</p></li>
 <li><p>Now load the file “Svalbard_STOP_rec” and press “Open”.</p></li>
@@ -524,7 +516,6 @@
 <li><p>You can now remove the R-Puck and turn of the blue control unit, disconnect the laptop and all other wires.</p></li>
 <li><p>Finally, take of the hood of the Trilobit and disconnect the batteries. Put the white plastic caps back on the wires and battery compartments.</p></li>
 </ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -558,12 +549,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="04_deployment.html"
+       href="05a_field_deployment.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Connecting the Trilobit and Start Recording</p>
+        <p class="prev-next-title">Deploying the Trilobit at Sea</p>
       </div>
     </a>
     <a class="right-next"
@@ -571,7 +562,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Downloading and Converting the Data</p>
+        <p class="prev-next-title">Downloading the Raw Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -581,23 +572,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stopping-the-trilobit-and-correcting-the-time">Stopping the Trilobit and Correcting the Time</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

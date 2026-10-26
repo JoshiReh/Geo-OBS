@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Downloading and Converting the Data &#8212; Geo-OBS</title>
+    <title>Downloading the Raw Data &#8212; Geo-OBS</title>
   
   
   
@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Chunking Files Larger than 2 GB" href="06_chunking.html" />
-    <link rel="prev" title="Stopping the Recording and Retrieving the Data" href="05_recovery.html" />
+    <link rel="next" title="Decoding the Raw Data" href="06b_decoding.html" />
+    <link rel="prev" title="Stopping the Trilobit and Correcting the Time" href="05_recovery.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -157,10 +157,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -232,22 +228,30 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Setup of Hardware and Batteries</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Deployment</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Start Recording</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Recording</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Recovery</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Recording and Retrieving the Data</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and Cleaning Data</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Downloading and Converting the Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="06_chunking.html">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Recording</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04b_start_recording.html">Starting the Recording</a></li>
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Processing with Python</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Field Deployment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05a_field_deployment.html">Deploying the Trilobit at Sea</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Recovery</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobit and Correcting the Time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Downloading, Decoding and Converting the Data</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Downloading the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06b_decoding.html">Decoding the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06c_segy.html">Converting the Data into SEG-Y Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_chunking.html">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06d_displaying.html">Displaying the Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
@@ -451,9 +455,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -464,19 +466,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Downloading and Converting the Data</h1>
+    <h1>Downloading the Raw Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaying-the-data">Displaying the Data</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -486,9 +480,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="downloading-and-converting-the-data">
-<span id="data"></span><h1>Downloading and Converting the Data<a class="headerlink" href="#downloading-and-converting-the-data" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="downloading-the-raw-data">
+<span id="data"></span><h1>Downloading the Raw Data<a class="headerlink" href="#downloading-the-raw-data" title="Link to this heading">#</a></h1>
+<div class="danger admonition">
+<p class="admonition-title">Attention</p>
 <p>Follow these instructions precisely. It is very easy to mess something up if one step is not executed properly.</p>
+</div>
 <p>Make sure that the batteries are <strong>disconnected</strong> before starting the Downloading Process.</p>
 <ol class="arabic simple">
 <li><p>Remove the copper cap from the data unit.</p></li>
@@ -525,75 +522,21 @@
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image41.jpg"><img alt="../../_images/word_image41.jpg" src="../../_images/word_image41.jpg" style="width: 338px;" />
 </a>
+<div class="tip admonition">
+<p class="admonition-title">New to the Terminal?</p>
 <p>If you have never used any terminal like bash before, use “cd” to go to the next folder like “cd \next folder\data”. If you want to jump back from “data” to “next folder” use the command “cd ..”. To list all files in one folder press “ls”. You should be able to copy paste the following commands to get to the Trilobit folder once you open powershell:</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd </span><span class="p">..</span>
 <span class="nb">cd </span><span class="p">..</span>
 <span class="nb">cd </span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">unisg</span><span class="p">\</span><span class="n">Desktop</span><span class="p">\</span><span class="n">Trilobit</span><span class="p">\</span>
 </pre></div>
 </div>
+</div>
 <ol class="arabic simple" start="8">
-<li><p>As seen in the last picture write “.\fix_all_ln.ps1” and press “enter”. This will create a new file that has exactly the same name as you named it and will re-name your original file into “old_xxx”. In my case my file is still called “Demonstration” but I also have the file “old_demonstration” which I can <strong>delete</strong>. You may have to type «*Set-*<em>ExecutionPolicy Unrestricted</em>” in the powershell when an error occurs before trying again.</p></li>
+<li><p>As seen in the last picture write “.\fix_all_ln.ps1” and press “enter”. This will create a new file that has exactly the same name as you named it and will re-name your original file into “old_xxx”. In my case my file is still called “Demonstration” but I also have the file “old_demonstration” which I can <strong>delete</strong>. You may have to type <code class="docutils literal notranslate"><span class="pre">Set-ExecutionPolicy</span> <span class="pre">Unrestricted</span></code> in the powershell when an error occurs before trying again.</p></li>
 </ol>
-<p>If your file is <strong>larger</strong> then 2GB the following steps are not relevant and you have to <strong>Chunk</strong> the file into subfiles, which is explained in <a class="reference internal" href="06_chunking.html#chunking"><span class="std std-ref">Chunking Files Larger than 2 GB</span></a>!</p>
-<ol class="arabic simple" start="9">
-<li><p>Go back into EDR. Still in the panel “Raw Dev” set the “Operation” to “Scan Raw” and select your raw dataset as you named it in Step 4.</p></li>
-<li><p>The panel in EDR should show you when the dataset started and when it stopped.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image42.jpg"><img alt="../../_images/word_image42.jpg" src="../../_images/word_image42.jpg" style="width: 466px;" />
-</a>
-<ol class="arabic simple" start="11">
-<li><p>Now select Operation “Decode Raw”. This should produce 9 new files: 4 .aux files (where aux0 is the temperature, aux1 is the voltage, and aux5 is the tilt) and 4 files .g1,.g2,.g3,.h1 that refer to our geophones and hydrophone in the trilobit. You will also get a text-file that you need later.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image43.jpg"><img alt="../../_images/word_image43.jpg" src="../../_images/word_image43.jpg" style="width: 373px;" />
-</a>
-<a class="reference internal image-reference" href="../../_images/word_image44.jpg"><img alt="../../_images/word_image44.jpg" src="../../_images/word_image44.jpg" style="width: 411px;" />
-</a>
-<ol class="arabic simple" start="12">
-<li><p>You now need to return to Windows Powershell and execute the following commands:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">.\get_skew.ps1</span></code> (note down the number!)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">.\xxx_seq1.txt</span></code> (for xxx insert your file name)</p></li>
-</ol>
-</li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image45.jpg"><img alt="../../_images/word_image45.jpg" src="../../_images/word_image45.jpg" style="width: 477px;" />
-</a>
-<ol class="arabic simple" start="13">
-<li><p>You have to focus on the following numbers:</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image46.png"><img alt="../../_images/word_image46.png" src="../../_images/word_image46.png" style="width: 406px;" />
-</a>
-<ol class="arabic simple" start="14">
-<li><p>Go into the Windows explorer and open the “Trilobit_SHT”-file with Notepad ++. Here you enter the Start end End-time that you just read from the txt file in powershell. Leave the last digit as “0” in both rows. Note that the digits are separated by a <strong>tab</strong> and not a <strong>space</strong>.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image47.jpg"><img alt="../../_images/word_image47.jpg" src="../../_images/word_image47.jpg" style="width: 459px;" />
-</a>
-<ol class="arabic simple" start="15">
-<li><p>Press Save and close, then open “Trilobit_RCV”. Here you enter the Skew number, aswell as the Unit Serial Number and the Trilobit number. You just do that in the first row and ignore the other columns. So just adjust the first 3 numbers in row 6! Also here, the digits are separated by a <strong>tab</strong> and not a <strong>space</strong>; that’s why it looks a bit weird in the picture below.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image48.jpg"><img alt="../../_images/word_image48.jpg" src="../../_images/word_image48.jpg" style="width: 519px;" />
-</a>
-<ol class="arabic simple" start="16">
-<li><p>The very last step is now to go back into EDR208 and change the operation to “Seis to SEGY”.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image49.jpg"><img alt="../../_images/word_image49.jpg" src="../../_images/word_image49.jpg" style="width: 428px;" />
-</a>
-<ol class="arabic simple" start="17">
-<li><p>Click on “Start Conversion” and select any of the 4 files you should see now (it will automatically convert the other files as well. You will then be requested to enter the previously modified RCV and SHT file and finally you enter the “header_edr” file.</p></li>
-</ol>
-<p><strong>It happens quite easily that you did not save the RCV or SHT file correctly or had a type in it. Then the conversion will cancel and you should revisit those files.</strong></p>
-<a class="reference internal image-reference" href="../../_images/word_image50.jpg"><img alt="../../_images/word_image50.jpg" src="../../_images/word_image50.jpg" style="width: 519px;" />
-</a>
-<a class="reference internal image-reference" href="../../_images/word_image51.jpg"><img alt="../../_images/word_image51.jpg" src="../../_images/word_image51.jpg" style="width: 520px;" />
-</a>
-<section id="displaying-the-data">
-<span id="displaying"></span><h2>Displaying the Data<a class="headerlink" href="#displaying-the-data" title="Link to this heading">#</a></h2>
-<p>UNIS has a license to the GeoGiga Software in Computer Lab 2, which is commonly used for showing and analyzing seismic data. However, GeoGiga is unfortunately not opening the files produced by EDR208 because the “Binary-Header” is writing false values into the file. For repairing the data, we have developed a python script that is repairing the data, see <a class="reference internal" href="08a_binary_header.html#binary-header"><span class="std std-ref">Binary Header Correction for GeoGiga</span></a>.</p>
-<p>In the meantime, you can use the software “SeiSee” which is installed on the Laptop. The data sometimes does not appear directly in the view-panel or it looks broken. Try to experiment with these parameters:</p>
-<a class="reference internal image-reference" href="../../_images/word_image52.jpg"><img alt="../../_images/word_image52.jpg" src="../../_images/word_image52.jpg" style="width: 300px;" />
-</a>
-</section>
-<div class="toctree-wrapper compound">
+<div class="danger admonition">
+<p class="admonition-title">Attention</p>
+<p>If your file is <strong>larger</strong> than 2 GB, you cannot continue directly with <a class="reference internal" href="06b_decoding.html#decoding"><span class="std std-ref">Decoding the Raw Data</span></a>. First you have to <strong>Chunk</strong> the file into subfiles, which is explained in <a class="reference internal" href="06_chunking.html#chunking"><span class="std std-ref">Chunking Files Larger than 2 GB</span></a>!</p>
 </div>
 </section>
 
@@ -633,15 +576,15 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Stopping the Recording and Retrieving the Data</p>
+        <p class="prev-next-title">Stopping the Trilobit and Correcting the Time</p>
       </div>
     </a>
     <a class="right-next"
-       href="06_chunking.html"
+       href="06b_decoding.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chunking Files Larger than 2 GB</p>
+        <p class="prev-next-title">Decoding the Raw Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -651,23 +594,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaying-the-data">Displaying the Data</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

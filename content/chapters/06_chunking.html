@@ -65,8 +65,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Processing the Data with Python" href="08_python_processing.html" />
-    <link rel="prev" title="Downloading and Converting the Data" href="06_data.html" />
+    <link rel="next" title="Displaying the Data" href="06d_displaying.html" />
+    <link rel="prev" title="Converting the Data into SEG-Y Files" href="06c_segy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -228,22 +228,30 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Setup of Hardware and Batteries</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Deployment</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Start Recording</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Recording</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Recovery</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Recording and Retrieving the Data</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and Cleaning Data</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="06_data.html">Downloading and Converting the Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Recording</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04b_start_recording.html">Starting the Recording</a></li>
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Processing with Python</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Field Deployment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05a_field_deployment.html">Deploying the Trilobit at Sea</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Recovery</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobit and Correcting the Time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Downloading, Decoding and Converting the Data</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06_data.html">Downloading the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06b_decoding.html">Decoding the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06c_segy.html">Converting the Data into SEG-Y Files</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06d_displaying.html">Displaying the Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
@@ -474,7 +482,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chunking-files-larger-than-2-gb">
 <span id="chunking"></span><h1>Chunking Files Larger than 2 GB<a class="headerlink" href="#chunking-files-larger-than-2-gb" title="Link to this heading">#</a></h1>
-<p>You should have a file that is already fixed with the command fix_all_ln as explained in step 1-8 in the previous chapter. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.</p>
+<p>You should have a file that is already fixed with the command fix_all_ln as explained in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.</p>
 <ol class="arabic simple">
 <li><p>In your “data” folder, create a folder calling it for example like the Trilobit you want to analyze the data from. In my example it is “01069”. Put the fixed Raw file into this folder.</p></li>
 <li><p>In this folder create folders you name “01069_1stChunk”, “01069_2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each containing 4 components that are xxx</p></li>
@@ -483,7 +491,7 @@
 <li><p>Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 01069_1stChunk and create a new file and name it the same way. Press “send/okay”.</p></li>
 <li><p>Wait until that has worked and repeat the last 3 steps for the 01069_2ndChunk by changing the time to the next 10 days.</p></li>
 <li><p>Repeat for all chunks until your previous raw-file is chunked into 3 smaller chunked files.</p></li>
-<li><p>After you have chunked the entire file go back into the previous chapter and follow steps 9-17! <strong>You will have to do it separately for each Chunk.</strong></p></li>
+<li><p>After you have chunked the entire file follow <a class="reference internal" href="06b_decoding.html#decoding"><span class="std std-ref">Decoding the Raw Data</span></a> and <a class="reference internal" href="06c_segy.html#segy"><span class="std std-ref">Converting the Data into SEG-Y Files</span></a>! <strong>You will have to do it separately for each Chunk.</strong></p></li>
 </ol>
 </section>
 
@@ -518,20 +526,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="06_data.html"
+       href="06c_segy.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Downloading and Converting the Data</p>
+        <p class="prev-next-title">Converting the Data into SEG-Y Files</p>
       </div>
     </a>
     <a class="right-next"
-       href="08_python_processing.html"
+       href="06d_displaying.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Processing the Data with Python</p>
+        <p class="prev-next-title">Displaying the Data</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

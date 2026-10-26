@@ -65,7 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Stopping the Recording and Retrieving the Data" href="05_recovery.html" />
+    <link rel="next" title="Starting the Recording" href="04b_start_recording.html" />
     <link rel="prev" title="Setup of Hardware and Batteries" href="03_preparation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -232,22 +232,30 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="03_preparation.html">Setup of Hardware and Batteries</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Deployment</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Start Recording</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Connecting the Trilobit and Start Recording</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Recovery</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Recording and Retrieving the Data</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and Cleaning Data</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="06_data.html">Downloading and Converting the Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="06_chunking.html">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Connecting the Trilobit and Start Recording</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04b_start_recording.html">Starting the Recording</a></li>
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Processing with Python</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Field Deployment</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05a_field_deployment.html">Deploying the Trilobit at Sea</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Recovery</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobit and Correcting the Time</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 5 - Downloading, Decoding and Converting the Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="06_data.html">Downloading the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06b_decoding.html">Decoding the Raw Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06c_segy.html">Converting the Data into SEG-Y Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_chunking.html">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06d_displaying.html">Displaying the Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
@@ -475,7 +483,6 @@
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-connection">Establishing Connection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-recording">Starting the Recording</a></li>
 </ul>
             </nav>
         </div>
@@ -571,44 +578,20 @@
 <ol class="arabic simple" start="13">
 <li><p>Following output should appear, showing you the Firmware and Serial Number and some other stuff.</p></li>
 </ol>
-<p><strong>Sometimes that does not work and you only get the first 2 lines, in that case remove the R-Puck and restart the blue control unit and EDR. Note that EDR should be run as Administrator at any time!</strong></p>
 <a class="reference internal image-reference" href="../../_images/word_image27.jpg"><img alt="../../_images/word_image27.jpg" src="../../_images/word_image27.jpg" style="width: 434px;" />
 </a>
+<div class="danger admonition">
+<p class="admonition-title">Attention</p>
+<p>Sometimes that does not work and you only get the first 2 lines, in that case remove the R-Puck and restart the blue control unit and EDR. Note that EDR should be run as Administrator at any time!</p>
+</div>
 <ol class="arabic simple" start="14">
 <li><p>You can also press “Send” and then “Inq_vTemp” to get information about temperature and voltage. If the aforementioned outputs worked it means that the connection is established successfully. At this point all lights should be green on the control unit.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image28.jpg"><img alt="../../_images/word_image28.jpg" src="../../_images/word_image28.jpg" style="width: 391px;" />
 </a>
 </section>
-<section id="starting-the-recording">
-<h2>Starting the Recording<a class="headerlink" href="#starting-the-recording" title="Link to this heading">#</a></h2>
-<ol class="arabic simple" start="15">
-<li><p>Go to the panel Script/Log in EDR</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image29.jpg"><img alt="../../_images/word_image29.jpg" src="../../_images/word_image29.jpg" style="width: 361px;" />
-</a>
-<ol class="arabic simple" start="16">
-<li><p>Press “Open Log file” and create a Log file in a folder you desire, ideally calling it something like “Start_1069_Log”. This will just save some commands so you get information about the sampling rate you chose, the temperature and voltage in the beginning and the moment where you started the recording that can be important when working with the data.</p></li>
-<li><p>Press “Send” and select the file “Svalbard_START_rec” in the “Trilobit”-folder.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image30.png"><img alt="../../_images/word_image30.png" src="../../_images/word_image30.png" style="width: 347px;" />
-</a>
-<ol class="arabic simple" start="18">
-<li><p>Finally Set the <em>Seconds Delay between each Script Command</em> to “2”. This will make sure that all scripts for starting and operating the Trilobit will be read in correctly.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image31.jpg"><img alt="../../_images/word_image31.jpg" src="../../_images/word_image31.jpg" style="width: 349px;" />
-</a>
-<ol class="arabic simple" start="19">
-<li><p>Press “Send” and <strong>wait</strong> until you get this output about 3 times:</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image32.jpg"><img alt="../../_images/word_image32.jpg" src="../../_images/word_image32.jpg" style="width: 395px;" />
-</a>
-<ol class="arabic simple" start="20">
-<li><p>Your Trilobit is now running and you can press “Close Log File”. To double check you can go into the start panel “EDR Cmd” and “Send” “Inq_Recording”, which will show you again if the recording is active (in UTC).</p></li>
-<li><p>You can now lift up the R-Puck and either start programming the next Trilobit or turn of the control unit and your laptop.</p></li>
-</ol>
-<p><em>Just for your reference I would recommend that you write down the <strong>start time</strong> yourself and especially the <strong>deployment</strong>- and the <strong>pick-up</strong> time. You will need that for your data processing.</em></p>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -651,11 +634,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="05_recovery.html"
+       href="04b_start_recording.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Stopping the Recording and Retrieving the Data</p>
+        <p class="prev-next-title">Starting the Recording</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -678,7 +661,6 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-connection">Establishing Connection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-recording">Starting the Recording</a></li>
 </ul>
   </nav></div>
 

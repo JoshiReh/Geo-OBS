@@ -97,10 +97,13 @@ To calibrate the GPS the entire system should now rest active for at least 30 mi
 
 13. Following output should appear, showing you the Firmware and Serial Number and some other stuff.
 
-**Sometimes that does not work and you only get the first 2 lines, in that case remove the R-Puck and restart the blue control unit and EDR. Note that EDR should be run as Administrator at any time!**
-
 ```{image} assets/word_image27.jpg
 :width: 434px
+```
+
+```{admonition} Attention
+:class: danger
+Sometimes that does not work and you only get the first 2 lines, in that case remove the R-Puck and restart the blue control unit and EDR. Note that EDR should be run as Administrator at any time!
 ```
 
 14. You can also press “Send” and then “Inq_vTemp” to get information about temperature and voltage. If the aforementioned outputs worked it means that the connection is established successfully. At this point all lights should be green on the control unit.
@@ -108,37 +111,3 @@ To calibrate the GPS the entire system should now rest active for at least 30 mi
 ```{image} assets/word_image28.jpg
 :width: 391px
 ```
-
-## Starting the Recording
-
-15. Go to the panel Script/Log in EDR
-
-```{image} assets/word_image29.jpg
-:width: 361px
-```
-
-16. Press “Open Log file” and create a Log file in a folder you desire, ideally calling it something like “Start_1069_Log”. This will just save some commands so you get information about the sampling rate you chose, the temperature and voltage in the beginning and the moment where you started the recording that can be important when working with the data.
-
-17. Press “Send” and select the file “Svalbard_START_rec” in the “Trilobit”-folder.
-
-```{image} assets/word_image30.png
-:width: 347px
-```
-
-18. Finally Set the *Seconds Delay between each Script Command* to “2”. This will make sure that all scripts for starting and operating the Trilobit will be read in correctly.
-
-```{image} assets/word_image31.jpg
-:width: 349px
-```
-
-19. Press “Send” and **wait** until you get this output about 3 times:
-
-```{image} assets/word_image32.jpg
-:width: 395px
-```
-
-20. Your Trilobit is now running and you can press “Close Log File”. To double check you can go into the start panel “EDR Cmd” and “Send” “Inq_Recording”, which will show you again if the recording is active (in UTC).
-
-21. You can now lift up the R-Puck and either start programming the next Trilobit or turn of the control unit and your laptop.
-
-*Just for your reference I would recommend that you write down the **start time** yourself and especially the **deployment**- and the **pick-up** time. You will need that for your data processing.*

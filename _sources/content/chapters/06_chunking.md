@@ -1,7 +1,7 @@
 (06_chunking)=
 # Chunking Files Larger than 2 GB
 
-You should have a file that is already fixed with the command fix_all_ln as explained in step 1-8 in the previous chapter. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.
+You should have a file that is already fixed with the command fix_all_ln as explained in {ref}`06_data`. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.
 
 1.  In your “data” folder, create a folder calling it for example like the Trilobit you want to analyze the data from. In my example it is “01069”. Put the fixed Raw file into this folder.
 
@@ -17,4 +17,4 @@ You should have a file that is already fixed with the command fix_all_ln as expl
 
 7.  Repeat for all chunks until your previous raw-file is chunked into 3 smaller chunked files.
 
-8.  After you have chunked the entire file go back into the previous chapter and follow steps 9-17! **You will have to do it separately for each Chunk.**
+8.  After you have chunked the entire file follow {ref}`06_decoding` and {ref}`06_segy`! **You will have to do it separately for each Chunk.**

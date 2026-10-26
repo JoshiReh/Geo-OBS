@@ -1,5 +1,5 @@
 (05_recovery)=
-# Stopping the Recording and Retrieving the Data
+# Stopping the Trilobit and Correcting the Time
 
 ```{admonition} What You Need
 :class: tip
@@ -20,11 +20,9 @@
 - Windows Powershell
 ```
 
-## Stopping the Trilobit and Correcting the Time
-
 This step is needed to correct the internal clock of the Trilobit which has a little bit of a drift especially after long deployments.
 
-1.  Setup everything as in the chapter before: Connect all cables, locate the GPS, let it calibrate for 30 minutes and connect the laptop.
+1.  Setup everything as in {ref}`04_deployment`: Connect all cables, locate the GPS, let it calibrate for 30 minutes and connect the laptop.
 
 2.  Start the EDR as Administrator and place the R-Puck on the Geophone. You can press “Send” and “Inq_Recording” to make sure it is still recording.
 
