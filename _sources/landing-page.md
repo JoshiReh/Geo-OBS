@@ -1,6 +1,6 @@
-# Trilobite OBS Manual
+# Geo-OBS Manual
 
-This manual explains preparation, deployment, recovery and data processing for Trilobite ocean bottom seismometers. Start with {ref}`01_introduction`.
+This manual explains preparation, deployment, recovery and data processing for Trilobite ocean bottom seismometers (OBS). Start with {ref}`01_introduction`.
 
 ```{admonition} Under construction
 :class: warning
