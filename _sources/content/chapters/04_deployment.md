@@ -1,5 +1,5 @@
 (04_deployment)=
-# Connecting the Trilobit and Start Data Collection
+# Connecting the Trilobit and Start Recording
 
 Hardware you need:
 
