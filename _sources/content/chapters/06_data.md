@@ -51,7 +51,7 @@ Make sure that the batteries are **disconnected** before starting the Downloadin
 :width: 338px
 ```
 
-If you have never used any terminal like bash before, use “cd” to go to the next folder like “cd \next folder\data”. If you want to jump back from “data” to “next folder” use the command “cd ..”. To list all files in one folder press “ls”. You should be able to copy paste the following commands to get to the Trilobite folder once you open powershell:
+If you have never used any terminal like bash before, use “cd” to go to the next folder like “cd \next folder\data”. If you want to jump back from “data” to “next folder” use the command “cd ..”. To list all files in one folder press “ls”. You should be able to copy paste the following commands to get to the Trilobit folder once you open powershell:
 
 ```powershell
 cd ..
@@ -71,7 +71,7 @@ If your file is **larger** then 2GB the following steps are not relevant and you
 :width: 466px
 ```
 
-11. Now select Operation “Decode Raw”. This should produce 9 new files: 4 .aux files (where aux0 is the temperature, aux1 is the voltage, and aux5 is the tilt) and 4 files .g1,.g2,.g3,.h1 that refer to our geophones and hydrophone in the trilobite. You will also get a text-file that you need later.
+11. Now select Operation “Decode Raw”. This should produce 9 new files: 4 .aux files (where aux0 is the temperature, aux1 is the voltage, and aux5 is the tilt) and 4 files .g1,.g2,.g3,.h1 that refer to our geophones and hydrophone in the trilobit. You will also get a text-file that you need later.
 
 ```{image} assets/word_image43.jpg
 :width: 373px
@@ -103,7 +103,7 @@ If your file is **larger** then 2GB the following steps are not relevant and you
 :width: 459px
 ```
 
-15. Press Save and close, then open “Trilobit_RCV”. Here you enter the Skew number, aswell as the Unit Serial Number and the Trilobite number. You just do that in the first row and ignore the other columns. So just adjust the first 3 numbers in row 6! Also here, the digits are separated by a **tab** and not a **space**; that’s why it looks a bit weird in the picture below.
+15. Press Save and close, then open “Trilobit_RCV”. Here you enter the Skew number, aswell as the Unit Serial Number and the Trilobit number. You just do that in the first row and ignore the other columns. So just adjust the first 3 numbers in row 6! Also here, the digits are separated by a **tab** and not a **space**; that’s why it looks a bit weird in the picture below.
 
 ```{image} assets/word_image48.jpg
 :width: 519px

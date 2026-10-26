@@ -229,11 +229,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Deployment</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobite and Start Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Data Collection</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Recovery</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobite and retrieving the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobit and retrieving the Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and cleaning data</span></p>
 <ul class="current nav bd-sidenav">
@@ -474,10 +474,10 @@
 <span id="chunking"></span><h1>Chunking Files that are larger than 2 GB<a class="headerlink" href="#chunking-files-that-are-larger-than-2-gb" title="Link to this heading">#</a></h1>
 <p>You should have a file that is already fixed with the command fix_all_ln as explained in step 1-8 in the previous chapter. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.</p>
 <ol class="arabic simple">
-<li><p>In your “data” folder, create a folder calling it for example like the Trilobite you want to analyze the data from. In my example it is “01069”. Put the fixed Raw file into this folder.</p></li>
+<li><p>In your “data” folder, create a folder calling it for example like the Trilobit you want to analyze the data from. In my example it is “01069”. Put the fixed Raw file into this folder.</p></li>
 <li><p>In this folder create folders you name “01069_1stChunk”, “01069_2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each containing 4 components that are xxx</p></li>
 <li><p>Go into the EDR program and in the “Scan Raw” panel select “Extract raw”.</p></li>
-<li><p>Select the time and date for your first Chunk e.g. 10 days. (Here I would recommend to start at a time that will be your starting time across all Data analysis. We deployed the Trilobites at 14:32 o’clock and I set the start time to 14:00 UTC, so 16:00 in Svalbard time to let the sediment settle)</p></li>
+<li><p>Select the time and date for your first Chunk e.g. 10 days. (Here I would recommend to start at a time that will be your starting time across all Data analysis. We deployed the Trilobits at 14:32 o’clock and I set the start time to 14:00 UTC, so 16:00 in Svalbard time to let the sediment settle)</p></li>
 <li><p>Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 01069_1stChunk and create a new file and name it the same way. Press “send/okay”.</p></li>
 <li><p>Wait until that has worked and repeat the last 3 steps for the 01069_2ndChunk by changing the time to the next 10 days.</p></li>
 <li><p>Repeat for all chunks until your previous raw-file is chunked into 3 smaller chunked files.</p></li>

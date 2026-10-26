@@ -1,13 +1,13 @@
 (01_introduction)=
 # Introduction
 
-Welcome to Geo-OBS. This manual is a step-by-step guide to setting up, starting and stopping a Trilobite ocean bottom seismometer, and to downloading and processing its data from RAW into SEG-Y files.
+Welcome to Geo-OBS. This manual is a step-by-step guide to setting up, starting and stopping a Trilobit ocean bottom seismometer, and to downloading and processing its data from RAW into SEG-Y files.
 
-The instructions are given in great detail and should be absolutely sufficient to operate a Trilobite. Please follow each and every step precisely.
+The instructions are given in great detail and should be absolutely sufficient to operate a Trilobit. Please follow each and every step precisely.
 
-## What is a Trilobite?
+## What is a Trilobit?
 
-A Trilobite is an ocean bottom seismometer (OBS): a self-contained recording station that is placed on the seafloor, records ground motion and pressure for weeks to months without any cable to the surface, and is recovered afterwards to read out the data.
+A Trilobit is an ocean bottom seismometer (OBS): a self-contained recording station that is placed on the seafloor, records ground motion and pressure for weeks to months without any cable to the surface, and is recovered afterwards to read out the data.
 
 The instrument is the big yellow unit you are standing in front of. Under its yellow housing it contains:
 
@@ -16,18 +16,18 @@ The instrument is the big yellow unit you are standing in front of. Under its ye
 - **three geophones** and **one hydrophone** as sensors,
 - **three-axial tilt sensors**, which record how the instrument lies on the seafloor.
 
-There is no cable and no live connection while the instrument is on the seafloor. All communication happens before the deployment and after the recovery, through the R-Puck, a wireless interface that is placed on top of the Trilobite and talks to the EDR208 software on the laptop.
+There is no cable and no live connection while the instrument is on the seafloor. All communication happens before the deployment and after the recovery, through the R-Puck, a wireless interface that is placed on top of the Trilobit and talks to the EDR208 software on the laptop.
 
 ## How the signals are recorded
 
-The Trilobite records four seismic channels at the same time:
+The Trilobit records four seismic channels at the same time:
 
-- **Three geophone channels (g1, g2, g3).** A geophone measures the velocity of ground motion: a coil moves relative to a magnet, and the motion induces a voltage that is proportional to the velocity of the seafloor. The Trilobite uses three 14 Hz SM-6 geophones in a so-called **Galperin configuration**. The three sensors are perpendicular to each other, but instead of one vertical and two horizontal sensors, each one is tilted by 54.7° from the vertical and they are spaced evenly around it. This makes all three sensors identical and lets them work at any tilt of the instrument ("omni-tilt"). The price is that the recorded g1, g2 and g3 are not yet x, y and z: they have to be converted during processing, see {ref}`08_xyz_conversion`.
-- **One hydrophone channel (h1).** A hydrophone measures pressure variations in the water instead of motion of the ground. The Trilobite uses an HTI-96-MIN hydrophone, a piezoelectric sensor: pressure changes deform a ceramic element and produce a voltage. Because the hydrophone only senses pressure, it records the acoustic (P-wave) part of the wavefield and does not see shear waves.
+- **Three geophone channels (g1, g2, g3).** A geophone measures the velocity of ground motion: a coil moves relative to a magnet, and the motion induces a voltage that is proportional to the velocity of the seafloor. The Trilobit uses three 14 Hz SM-6 geophones in a so-called **Galperin configuration**. The three sensors are perpendicular to each other, but instead of one vertical and two horizontal sensors, each one is tilted by 54.7° from the vertical and they are spaced evenly around it. This makes all three sensors identical and lets them work at any tilt of the instrument ("omni-tilt"). The price is that the recorded g1, g2 and g3 are not yet x, y and z: they have to be converted during processing, see {ref}`08_xyz_conversion`.
+- **One hydrophone channel (h1).** A hydrophone measures pressure variations in the water instead of motion of the ground. The Trilobit uses an HTI-96-MIN hydrophone, a piezoelectric sensor: pressure changes deform a ceramic element and produce a voltage. Because the hydrophone only senses pressure, it records the acoustic (P-wave) part of the wavefield and does not see shear waves.
 
 Recording both kinds of sensors is what makes an OBS powerful. The combination of the three geophone components and the hydrophone allows you to separate the up-going and down-going parts of the wavefield, to distinguish P-waves from S-waves, and to check whether a signal came through the water or through the ground.
 
-In addition to the seismic channels, the Trilobite logs auxiliary channels, among them temperature (aux0), battery voltage (aux1) and tilt (aux5). They are written into the same raw file and are useful for quality control, see {ref}`06_data`.
+In addition to the seismic channels, the Trilobit logs auxiliary channels, among them temperature (aux0), battery voltage (aux1) and tilt (aux5). They are written into the same raw file and are useful for quality control, see {ref}`06_data`.
 
 The internal clock is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see {ref}`05_recovery`.
 
@@ -48,7 +48,7 @@ The internal clock is synchronised to GPS time before the deployment, but drifts
 
 All numbers are taken from the manufacturer's spec sheet: {download}`Trilobit specifications (PDF) <../assets/docs/Trilobit_specs.pdf>`.
 
-## What can you measure with a Trilobite?
+## What can you measure with a Trilobit?
 
 An OBS record is simply a long, continuous recording of everything that moves the seafloor or the water above it. A few simple examples:
 
@@ -57,7 +57,7 @@ An OBS record is simply a long, continuous recording of everything that moves th
 - **Ice.** Calving glacier fronts, drifting sea ice and cracking ice produce strong, repeated signals in Svalbard's fjords.
 - **Ocean and weather noise.** Waves, swell and storms generate a continuous background noise whose level can itself be the signal of interest.
 - **Ships and other man-made sources.** Passing vessels are clearly visible on the hydrophone channel and often have to be removed before further analysis.
-- **Active-source experiments.** If an air gun or another controlled source is fired during the deployment, the Trilobite records the reflected and refracted waves, and the data can be used to image the structure below the seafloor.
+- **Active-source experiments.** If an air gun or another controlled source is fired during the deployment, the Trilobit records the reflected and refracted waves, and the data can be used to image the structure below the seafloor.
 
 ```{admonition} Under construction
 :class: warning

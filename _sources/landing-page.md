@@ -2,7 +2,7 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
-## Operating Trilobite ocean bottom seismometers
+## Operating Trilobit ocean bottom seismometers
 
 ````{margin} Based on Geo-UAV
 
@@ -11,12 +11,12 @@ The structure of this manual is based on the UNIS compendium
 
 ````
 
-This manual is designed for students, as well as scientific and technical staff, who want to learn how to prepare, deploy and recover Trilobite ocean bottom seismometers (OBS) and how to process the recorded data.
+This manual is designed for students, as well as scientific and technical staff, who want to learn how to prepare, deploy and recover Trilobit ocean bottom seismometers (OBS) and how to process the recorded data.
 
 ### About Geo-OBS
 
 ```{admonition} Open access
-Geo-OBS is **open for everyone to follow online**. It is meant as an open reference work for operating Trilobite ocean bottom seismometers in the field.
+Geo-OBS is **open for everyone to follow online**. It is meant as an open reference work for operating Trilobit ocean bottom seismometers in the field.
 ```
 
 The instructions are given step by step and in great detail. Please follow each and every step precisely.
@@ -37,9 +37,9 @@ Geo-OBS is split into several sessions:
 
 After working through Geo-OBS, you will be able to:
 
-- ✔️ Set up the hardware and charge the batteries of a Trilobite
-- ✔️ Connect to the Trilobite and start a recording
-- ✔️ Stop the Trilobite and correct the time after recovery
+- ✔️ Set up the hardware and charge the batteries of a Trilobit
+- ✔️ Connect to the Trilobit and start a recording
+- ✔️ Stop the Trilobit and correct the time after recovery
 - ✔️ Download the RAW data and convert it into SEG-Y files
 - ✔️ Display the recorded data
 - ✔️ Process the data with Python: fix the binary header, convert to x, y, z and cut daily files

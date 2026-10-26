@@ -233,11 +233,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 2 - Deployment</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobite and Start Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_deployment.html">Connecting the Trilobit and Start Data Collection</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 3 - Recovery</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobite and retrieving the Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_recovery.html">Stopping the Trilobit and retrieving the Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 4 - Decoding and cleaning data</span></p>
 <ul class="nav bd-sidenav">
@@ -472,10 +472,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-trilobite">What is a Trilobite?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-trilobit">What is a Trilobit?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-signals-are-recorded">How the signals are recorded</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#facts-and-figures">Facts and figures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-you-measure-with-a-trilobite">What can you measure with a Trilobite?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-you-measure-with-a-trilobit">What can you measure with a Trilobit?</a></li>
 </ul>
             </nav>
         </div>
@@ -489,11 +489,11 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction">
 <span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
-<p>Welcome to Geo-OBS. This manual is a step-by-step guide to setting up, starting and stopping a Trilobite ocean bottom seismometer, and to downloading and processing its data from RAW into SEG-Y files.</p>
-<p>The instructions are given in great detail and should be absolutely sufficient to operate a Trilobite. Please follow each and every step precisely.</p>
-<section id="what-is-a-trilobite">
-<h2>What is a Trilobite?<a class="headerlink" href="#what-is-a-trilobite" title="Link to this heading">#</a></h2>
-<p>A Trilobite is an ocean bottom seismometer (OBS): a self-contained recording station that is placed on the seafloor, records ground motion and pressure for weeks to months without any cable to the surface, and is recovered afterwards to read out the data.</p>
+<p>Welcome to Geo-OBS. This manual is a step-by-step guide to setting up, starting and stopping a Trilobit ocean bottom seismometer, and to downloading and processing its data from RAW into SEG-Y files.</p>
+<p>The instructions are given in great detail and should be absolutely sufficient to operate a Trilobit. Please follow each and every step precisely.</p>
+<section id="what-is-a-trilobit">
+<h2>What is a Trilobit?<a class="headerlink" href="#what-is-a-trilobit" title="Link to this heading">#</a></h2>
+<p>A Trilobit is an ocean bottom seismometer (OBS): a self-contained recording station that is placed on the seafloor, records ground motion and pressure for weeks to months without any cable to the surface, and is recovered afterwards to read out the data.</p>
 <p>The instrument is the big yellow unit you are standing in front of. Under its yellow housing it contains:</p>
 <ul class="simple">
 <li><p><strong>two battery compartments</strong> (A and B), each holding one 10.5 V / 75 Ah alkaline battery,</p></li>
@@ -501,18 +501,18 @@
 <li><p><strong>three geophones</strong> and <strong>one hydrophone</strong> as sensors,</p></li>
 <li><p><strong>three-axial tilt sensors</strong>, which record how the instrument lies on the seafloor.</p></li>
 </ul>
-<p>There is no cable and no live connection while the instrument is on the seafloor. All communication happens before the deployment and after the recovery, through the R-Puck, a wireless interface that is placed on top of the Trilobite and talks to the EDR208 software on the laptop.</p>
+<p>There is no cable and no live connection while the instrument is on the seafloor. All communication happens before the deployment and after the recovery, through the R-Puck, a wireless interface that is placed on top of the Trilobit and talks to the EDR208 software on the laptop.</p>
 </section>
 <section id="how-the-signals-are-recorded">
 <h2>How the signals are recorded<a class="headerlink" href="#how-the-signals-are-recorded" title="Link to this heading">#</a></h2>
-<p>The Trilobite records four seismic channels at the same time:</p>
+<p>The Trilobit records four seismic channels at the same time:</p>
 <ul class="simple">
-<li><p><strong>Three geophone channels (g1, g2, g3).</strong> A geophone measures the velocity of ground motion: a coil moves relative to a magnet, and the motion induces a voltage that is proportional to the velocity of the seafloor. The Trilobite uses three 14 Hz SM-6 geophones in a so-called <strong>Galperin configuration</strong>. The three sensors are perpendicular to each other, but instead of one vertical and two horizontal sensors, each one is tilted by 54.7° from the vertical and they are spaced evenly around it. This makes all three sensors identical and lets them work at any tilt of the instrument (“omni-tilt”). The price is that the recorded g1, g2 and g3 are not yet x, y and z: they have to be converted during processing, see <a class="reference internal" href="08b_xyz_conversion.html#xyz-conversion"><span class="std std-ref">X, Y, Z Conversion</span></a>.</p></li>
-<li><p><strong>One hydrophone channel (h1).</strong> A hydrophone measures pressure variations in the water instead of motion of the ground. The Trilobite uses an HTI-96-MIN hydrophone, a piezoelectric sensor: pressure changes deform a ceramic element and produce a voltage. Because the hydrophone only senses pressure, it records the acoustic (P-wave) part of the wavefield and does not see shear waves.</p></li>
+<li><p><strong>Three geophone channels (g1, g2, g3).</strong> A geophone measures the velocity of ground motion: a coil moves relative to a magnet, and the motion induces a voltage that is proportional to the velocity of the seafloor. The Trilobit uses three 14 Hz SM-6 geophones in a so-called <strong>Galperin configuration</strong>. The three sensors are perpendicular to each other, but instead of one vertical and two horizontal sensors, each one is tilted by 54.7° from the vertical and they are spaced evenly around it. This makes all three sensors identical and lets them work at any tilt of the instrument (“omni-tilt”). The price is that the recorded g1, g2 and g3 are not yet x, y and z: they have to be converted during processing, see <a class="reference internal" href="08b_xyz_conversion.html#xyz-conversion"><span class="std std-ref">X, Y, Z Conversion</span></a>.</p></li>
+<li><p><strong>One hydrophone channel (h1).</strong> A hydrophone measures pressure variations in the water instead of motion of the ground. The Trilobit uses an HTI-96-MIN hydrophone, a piezoelectric sensor: pressure changes deform a ceramic element and produce a voltage. Because the hydrophone only senses pressure, it records the acoustic (P-wave) part of the wavefield and does not see shear waves.</p></li>
 </ul>
 <p>Recording both kinds of sensors is what makes an OBS powerful. The combination of the three geophone components and the hydrophone allows you to separate the up-going and down-going parts of the wavefield, to distinguish P-waves from S-waves, and to check whether a signal came through the water or through the ground.</p>
-<p>In addition to the seismic channels, the Trilobite logs auxiliary channels, among them temperature (aux0), battery voltage (aux1) and tilt (aux5). They are written into the same raw file and are useful for quality control, see <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading and Converting the Data</span></a>.</p>
-<p>The internal clock is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see <a class="reference internal" href="05_recovery.html#recovery"><span class="std std-ref">Stopping the Trilobite and retrieving the Data</span></a>.</p>
+<p>In addition to the seismic channels, the Trilobit logs auxiliary channels, among them temperature (aux0), battery voltage (aux1) and tilt (aux5). They are written into the same raw file and are useful for quality control, see <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading and Converting the Data</span></a>.</p>
+<p>The internal clock is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see <a class="reference internal" href="05_recovery.html#recovery"><span class="std std-ref">Stopping the Trilobit and retrieving the Data</span></a>.</p>
 </section>
 <section id="facts-and-figures">
 <h2>Facts and figures<a class="headerlink" href="#facts-and-figures" title="Link to this heading">#</a></h2>
@@ -532,8 +532,8 @@
 </div>
 <p>All numbers are taken from the manufacturer’s spec sheet: <a class="reference download internal" download="" href="../../_downloads/b7c7d8ae1ea387ec1f4e9ef2546dfd94/Trilobit_specs.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Trilobit</span> <span class="pre">specifications</span> <span class="pre">(PDF)</span></code></a>.</p>
 </section>
-<section id="what-can-you-measure-with-a-trilobite">
-<h2>What can you measure with a Trilobite?<a class="headerlink" href="#what-can-you-measure-with-a-trilobite" title="Link to this heading">#</a></h2>
+<section id="what-can-you-measure-with-a-trilobit">
+<h2>What can you measure with a Trilobit?<a class="headerlink" href="#what-can-you-measure-with-a-trilobit" title="Link to this heading">#</a></h2>
 <p>An OBS record is simply a long, continuous recording of everything that moves the seafloor or the water above it. A few simple examples:</p>
 <ul class="simple">
 <li><p><strong>Earthquakes.</strong> Local, regional and distant earthquakes are recorded on the geophone channels. From the arrival times at several stations you can locate an event.</p></li>
@@ -541,7 +541,7 @@
 <li><p><strong>Ice.</strong> Calving glacier fronts, drifting sea ice and cracking ice produce strong, repeated signals in Svalbard’s fjords.</p></li>
 <li><p><strong>Ocean and weather noise.</strong> Waves, swell and storms generate a continuous background noise whose level can itself be the signal of interest.</p></li>
 <li><p><strong>Ships and other man-made sources.</strong> Passing vessels are clearly visible on the hydrophone channel and often have to be removed before further analysis.</p></li>
-<li><p><strong>Active-source experiments.</strong> If an air gun or another controlled source is fired during the deployment, the Trilobite records the reflected and refracted waves, and the data can be used to image the structure below the seafloor.</p></li>
+<li><p><strong>Active-source experiments.</strong> If an air gun or another controlled source is fired during the deployment, the Trilobit records the reflected and refracted waves, and the data can be used to image the structure below the seafloor.</p></li>
 </ul>
 <div class="warning admonition">
 <p class="admonition-title">Under construction</p>
@@ -616,10 +616,10 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-trilobite">What is a Trilobite?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-trilobit">What is a Trilobit?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-signals-are-recorded">How the signals are recorded</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#facts-and-figures">Facts and figures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-you-measure-with-a-trilobite">What can you measure with a Trilobite?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-you-measure-with-a-trilobit">What can you measure with a Trilobit?</a></li>
 </ul>
   </nav></div>
 
