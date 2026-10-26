@@ -1,5 +1,5 @@
 (04_deployment)=
-# Connecting the Trilobite and Start Data Collection
+# Connecting the Trilobit and Start Data Collection
 
 Hardware you need:
 
@@ -73,7 +73,7 @@ Software you need (should be on the Laptop):
 
 To calibrate the GPS the entire system should now rest active for at least 30 minutes before continuing. In the meantime:
 
-8.  Lift up the hood of the trilobite as explained in the previous chapter and pop of the white plastic caps of the battery housings and cables. Especially for the cable you might need a good pair of pliers.
+8.  Lift up the hood of the trilobit as explained in the previous chapter and pop of the white plastic caps of the battery housings and cables. Especially for the cable you might need a good pair of pliers.
 
 9.  Make sure that there is an O-ring on both, the battery compartment and the cable as shown in the picture
 
@@ -87,7 +87,7 @@ To calibrate the GPS the entire system should now rest active for at least 30 mi
 :width: 354px
 ```
 
-11. After that you can take the R-Puck and place it on top of the Trilobite like shown. A red light should flash and blink every couple of seconds. You may need to press the button on the side of the R-Puck to activate it.
+11. After that you can take the R-Puck and place it on top of the Trilobit like shown. A red light should flash and blink every couple of seconds. You may need to press the button on the side of the R-Puck to activate it.
 
 ```{image} assets/word_image25.jpg
 :width: 482px
@@ -129,7 +129,7 @@ To calibrate the GPS the entire system should now rest active for at least 30 mi
 :width: 347px
 ```
 
-18. Finally Set the *Seconds Delay between each Script Command* to “2”. This will make sure that all scripts for starting and operating the Trilobite will be read in correctly.
+18. Finally Set the *Seconds Delay between each Script Command* to “2”. This will make sure that all scripts for starting and operating the Trilobit will be read in correctly.
 
 ```{image} assets/word_image31.jpg
 :width: 349px
@@ -141,8 +141,8 @@ To calibrate the GPS the entire system should now rest active for at least 30 mi
 :width: 395px
 ```
 
-20. Your Trilobite is now running and you can press “Close Log File”. To double check you can go into the start panel “EDR Cmd” and “Send” “Inq_Recording”, which will show you again if the recording is active (in UTC).
+20. Your Trilobit is now running and you can press “Close Log File”. To double check you can go into the start panel “EDR Cmd” and “Send” “Inq_Recording”, which will show you again if the recording is active (in UTC).
 
-21. You can now lift up the R-Puck and either start programming the next Trilobite or turn of the control unit and your laptop.
+21. You can now lift up the R-Puck and either start programming the next Trilobit or turn of the control unit and your laptop.
 
 *Just for your reference I would recommend that you write down the **start time** yourself and especially the **deployment**- and the **pick-up** time. You will need that for your data processing.*

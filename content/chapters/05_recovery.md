@@ -1,5 +1,5 @@
 (05_recovery)=
-# Stopping the Trilobite and retrieving the Data
+# Stopping the Trilobit and retrieving the Data
 
 Hardware you need:
 
@@ -25,9 +25,9 @@ Software you need (should be on the Laptop):
 
 - Windows Powershell
 
-## Stopping the Trilobite and correcting the time
+## Stopping the Trilobit and correcting the time
 
-This step is needed to correct the internal clock of the Trilobite which has a little bit of a drift especially after long deployments.
+This step is needed to correct the internal clock of the Trilobit which has a little bit of a drift especially after long deployments.
 
 1.  Setup everything as in the chapter before: Connect all cables, locate the GPS, let it calibrate for 30 minutes and connect the laptop.
 
@@ -47,4 +47,4 @@ This step is needed to correct the internal clock of the Trilobite which has a l
 
 7.  You can now remove the R-Puck and turn of the blue control unit, disconnect the laptop and all other wires.
 
-8.  Finally, take of the hood of the Trilobite and disconnect the batteries. Put the white plastic caps back on the wires and battery compartments.
+8.  Finally, take of the hood of the Trilobit and disconnect the batteries. Put the white plastic caps back on the wires and battery compartments.

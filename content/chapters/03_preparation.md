@@ -1,11 +1,11 @@
 (03_preparation)=
 # Setup of Hardware and Batteries
 
-Ideally you are now standing in front one of the big yellow Trilobites
+Ideally you are now standing in front one of the big yellow Trilobits
 
 You need:
 
-- 2 Fresh 10.5 V – 75Ah Alkaline Batteries (per Trilobite)
+- 2 Fresh 10.5 V – 75Ah Alkaline Batteries (per Trilobit)
 
 - Multimeter
 
@@ -25,7 +25,7 @@ You need:
 :width: 292px
 ```
 
-2.  You can now take of the lid. Use the handles on the side. The Trilobite consist of 2 battery compartments, 1 data unit and of course the Hydrophone and 3 Geophones.
+2.  You can now take of the lid. Use the handles on the side. The Trilobit consist of 2 battery compartments, 1 data unit and of course the Hydrophone and 3 Geophones.
 
 ```{image} assets/word_image3.jpg
 :width: 503px
@@ -75,11 +75,11 @@ In most cases you will need screws to push the lid of the compartment. Evenly dr
 
 10. Repeat for the second battery.
 
-11. If necessary clean the inside of the Trilobite a bit.
+11. If necessary clean the inside of the Trilobit a bit.
 
 12. Place the freshly installed battery in the corresponding position. Make sure that compartment A goes into the spot of A (see in Picture 2).
 
-13. If you don’t want to start the Trilobite immediately, just pop the yellow housing back on. Make sure to not clamp the battery connecting cables between the battery compartment and the housing. The housing can only go on in a certain orientation.
+13. If you don’t want to start the Trilobit immediately, just pop the yellow housing back on. Make sure to not clamp the battery connecting cables between the battery compartment and the housing. The housing can only go on in a certain orientation.
 
 ```{image} assets/word_image11.jpg
 :width: 381px
