@@ -1,27 +1,23 @@
 (04_deployment)=
 # Connecting the Trilobit and Start Recording
 
-Hardware you need:
+```{admonition} What You Need
+:class: tip
+**Hardware**
 
 - Blue Motherboard/Control Unit
-
 - GPS antenna with cable
-
 - 2 COM to USB cable
-
 - The R-Puck
-
 - The UNIS Geophone Laptop
-
 - 6 mm Hex Allen Key
-
 - Pliers
 
-Software you need (should be on the Laptop):
+**Software (should be on the Laptop)**
 
 - EDR208
-
 - Notepad ++
+```
 
 ## Establishing Connection
 
