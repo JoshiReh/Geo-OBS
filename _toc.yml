@@ -11,21 +11,29 @@ parts:
   chapters:
   - file: content/chapters/03_preparation.md
 
-- caption: SESSION 2 - Deployment
+- caption: SESSION 2 - Start Recording
   chapters:
   - file: content/chapters/04_deployment.md
+    sections:
+    - file: content/chapters/04b_start_recording.md
 
-- caption: SESSION 3 - Recovery
+- caption: SESSION 3 - Field Deployment
+  chapters:
+  - file: content/chapters/05a_field_deployment.md
+
+- caption: SESSION 4 - Recovery
   chapters:
   - file: content/chapters/05_recovery.md
 
-- caption: SESSION 4 - Decoding and Cleaning Data
+- caption: SESSION 5 - Downloading, Decoding and Converting the Data
   chapters:
   - file: content/chapters/06_data.md
-    sections:
-    - file: content/chapters/06_chunking.md
+  - file: content/chapters/06b_decoding.md
+  - file: content/chapters/06c_segy.md
+  - file: content/chapters/06_chunking.md
+  - file: content/chapters/06d_displaying.md
 
-- caption: SESSION 5 - Processing with Python
+- caption: SESSION 6 - Processing with Python
   chapters:
   - file: content/chapters/08_python_processing.md
     sections:
