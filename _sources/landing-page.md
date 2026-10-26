@@ -37,12 +37,12 @@ Geo-OBS is split into several sessions:
 
 After working through Geo-OBS, you will be able to:
 
-- ✔️ Set up the hardware and charge the batteries of a Trilobit
+- ✔️ Set up the hardware and change the batteries of a Trilobit
 - ✔️ Connect to the Trilobit and start a recording
 - ✔️ Stop the Trilobit and correct the time after recovery
 - ✔️ Download the RAW data and convert it into SEG-Y files
 - ✔️ Display the recorded data
-- ✔️ Process the data with Python: fix the binary header, convert to x, y, z and cut daily files
+- ✔️ Process the data with Python
 
 ### Project Status
 
