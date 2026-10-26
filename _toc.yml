@@ -19,7 +19,7 @@ parts:
   chapters:
   - file: content/chapters/05_recovery.md
 
-- caption: SESSION 4 - Decoding and cleaning data
+- caption: SESSION 4 - Decoding and Cleaning Data
   chapters:
   - file: content/chapters/06_data.md
     sections:
@@ -39,7 +39,7 @@ parts:
   - file: content/chapters/07_checklists.md
   - file: content/chapters/09_documents.md
 
-- caption: External Links
+- caption: EXTERNAL LINKS
   chapters:
   - url: https://unisvalbard.github.io/ebooks/
     title: UNIS Compendium Portal
