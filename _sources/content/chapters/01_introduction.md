@@ -1,5 +1,5 @@
 (01_introduction)=
-# Instructions on Operating Trilobites
+# Introduction
 
 The following document is a step-by-step guide to set up-, start-, end a trilobite and downloading and processing the data from RAW into SEG-Y files.
 
