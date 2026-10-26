@@ -1,11 +1,35 @@
 format: jb-book
 root: landing-page.md
 
-chapters:
-- file: content/chapters/01_introduction.md
-- file: content/chapters/02_components.md
-- file: content/chapters/03_preparation.md
-- file: content/chapters/04_deployment.md
-- file: content/chapters/05_recovery.md
-- file: content/chapters/06_data.md
-- file: content/chapters/07_checklists.md
+parts:
+- caption: INTRODUCTION
+  chapters:
+  - file: content/chapters/01_introduction.md
+  - file: content/chapters/02_components.md
+
+- caption: SESSION 1 - Preparation
+  chapters:
+  - file: content/chapters/03_preparation.md
+
+- caption: SESSION 2 - Deployment
+  chapters:
+  - file: content/chapters/04_deployment.md
+
+- caption: SESSION 3 - Recovery
+  chapters:
+  - file: content/chapters/05_recovery.md
+
+- caption: SESSION 4 - Data processing
+  chapters:
+  - file: content/chapters/06_data.md
+
+- caption: SUPPLEMENTARY
+  chapters:
+  - file: content/chapters/07_checklists.md
+
+- caption: External Links
+  chapters:
+  - url: https://unisvalbard.github.io/ebooks/
+    title: UNIS Compendium Portal
+  - url: https://unisvalbard.github.io/Geo-UAV/
+    title: Geo-UAV

@@ -1,6 +1,6 @@
 title: "Geo-OBS"
 author: "Joshua Rehlinghaus"
-copyright: "2026"
+copyright: "2026 (CC-BY-NC except where otherwise stated)"
 logo: content/assets/trilobit_icon.png
 
 repository:
@@ -8,9 +8,11 @@ repository:
   branch: main
 
 html:
+  use_issues_button: true
   use_repository_button: true
   use_edit_page_button: true
   home_page_in_navbar: true
+  announcement: 'Geo-OBS is open access and still under construction. Feedback is welcome!'
 
 execute:
   execute_notebooks: "auto"
