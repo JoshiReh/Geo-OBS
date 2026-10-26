@@ -19,9 +19,20 @@ parts:
   chapters:
   - file: content/chapters/05_recovery.md
 
-- caption: SESSION 4 - Data processing
+- caption: SESSION 4 - Decoding and cleaning data
   chapters:
   - file: content/chapters/06_data.md
+    sections:
+    - file: content/chapters/06_chunking.md
+
+- caption: SESSION 5 - Processing with Python
+  chapters:
+  - file: content/chapters/08_python_processing.md
+    sections:
+    - file: content/chapters/08a_binary_header.md
+    - file: content/chapters/08b_xyz_conversion.md
+    - file: content/chapters/08c_segy_daily.md
+    - file: content/chapters/08d_segy_qc.md
 
 - caption: SUPPLEMENTARY
   chapters:
@@ -31,5 +42,3 @@ parts:
   chapters:
   - url: https://unisvalbard.github.io/ebooks/
     title: UNIS Compendium Portal
-  - url: https://unisvalbard.github.io/Geo-UAV/
-    title: Geo-UAV

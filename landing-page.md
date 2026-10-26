@@ -29,7 +29,8 @@ Geo-OBS is split into several sessions:
 - Session 1: {ref}`03_preparation`
 - Session 2: {ref}`04_deployment`
 - Session 3: {ref}`05_recovery`
-- Session 4: {ref}`06_data`
+- Session 4: Decoding and cleaning data ({ref}`06_data`, {ref}`06_chunking`)
+- Session 5: {ref}`08_python_processing` (binary header correction, x, y, z conversion, daily files, QC explorer)
 - Supplementary: {ref}`07_checklists`
 
 ### Learning outcomes
@@ -41,6 +42,7 @@ After working through Geo-OBS, you will be able to:
 - ✔️ Stop the Trilobite and correct the time after recovery
 - ✔️ Download the RAW data and convert it into SEG-Y files
 - ✔️ Display the recorded data
+- ✔️ Process the data with Python: fix the binary header, convert to x, y, z and cut daily files
 
 ### Project status
 
