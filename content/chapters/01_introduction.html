@@ -495,7 +495,14 @@
 <section id="what-is-a-trilobit">
 <h2>What Is a Trilobit?<a class="headerlink" href="#what-is-a-trilobit" title="Link to this heading">#</a></h2>
 <p>A Trilobit is an ocean bottom seismometer (OBS): a self-contained recording station that is placed on the seafloor, records ground motion and pressure for weeks to months without any cable to the surface, and is recovered afterwards to read out the data.</p>
-<p>The instrument is the big yellow unit you are standing in front of. Under its yellow housing it contains:</p>
+<figure class="align-default" id="fig-trilobit">
+<a class="reference internal image-reference" href="../../_images/trilobit_overview.jpg"><img alt="../../_images/trilobit_overview.jpg" src="../../_images/trilobit_overview.jpg" style="width: 450px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">A Trilobit ocean bottom seismometer. (Placeholder: replace content/assets/trilobit_overview.jpg with an overview photo.)</span><a class="headerlink" href="#fig-trilobit" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The instrument is the big yellow unit shown in <a class="reference internal" href="#fig-trilobit"><span class="std std-numref">Fig. 2</span></a>. Under its yellow housing it contains:</p>
 <ul class="simple">
 <li><p><strong>two battery compartments</strong> (A and B), each holding one 10.5 V / 75 Ah alkaline battery,</p></li>
 <li><p><strong>one recorder module</strong>, the data unit that digitises and stores the data,</p></li>
@@ -512,8 +519,8 @@
 <li><p><strong>One hydrophone channel (h1).</strong> A hydrophone measures pressure variations in the water instead of motion of the ground. The Trilobit uses an HTI-96-MIN hydrophone, a piezoelectric sensor: pressure changes deform a ceramic element and produce a voltage. Because the hydrophone only senses pressure, it records the acoustic (P-wave) part of the wavefield and does not see shear waves.</p></li>
 </ul>
 <p>Recording both kinds of sensors is what makes an OBS powerful. The combination of the three geophone components and the hydrophone allows you to separate the up-going and down-going parts of the wavefield, to distinguish P-waves from S-waves, and to check whether a signal came through the water or through the ground.</p>
-<p>In addition to the seismic channels, the Trilobit logs auxiliary channels, among them temperature (aux0), battery voltage (aux1) and tilt (aux5). They are written into the same raw file and are useful for quality control, see <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading and Converting the Data</span></a>.</p>
-<p>The internal clock is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see <a class="reference internal" href="05_recovery.html#recovery"><span class="std std-ref">Stopping the Recording and Retrieving the Data</span></a>.</p>
+<p>In addition to the seismic channels, the Trilobit logs auxiliary channels, among them <strong>temperature’</strong> (aux0), <strong>battery voltage</strong> (aux1) and <strong>tilt</strong> (aux5). They are written into the same raw file and are useful for quality control, see <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading and Converting the Data</span></a>.</p>
+<p>The <strong>internal clock</strong> is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see <a class="reference internal" href="05_recovery.html#recovery"><span class="std std-ref">Stopping the Recording and Retrieving the Data</span></a>.</p>
 </section>
 <section id="facts-and-figures">
 <h2>Facts and Figures<a class="headerlink" href="#facts-and-figures" title="Link to this heading">#</a></h2>
@@ -527,8 +534,7 @@
 <li><p><strong>Recording:</strong> 24-bit, sample interval 1, 2 or 4 ms (bandwidth up to 400, 200 or 100 Hz)</p></li>
 <li><p><strong>Storage:</strong> 2 × 64 GB flash, enough for 90 days at 2 ms</p></li>
 <li><p><strong>Power:</strong> 2 × 10.5 V / 75 Ah alkaline batteries</p></li>
-<li><p><strong>Battery life:</strong> 40 to 90 days, depending on battery choice (alkaline or lithium); the battery module is rated for 50 days</p></li>
-<li><p><strong>Clock drift (uncorrected):</strong> about 26 ms after 15 days, 52 ms after 30 days, 155 ms after 90 days</p></li>
+<li><p><strong>Battery life:</strong> 40 to 90 days, depending on battery choice (alkaline or lithium)</p></li>
 </ul>
 </div>
 <p>All numbers are taken from the manufacturer’s spec sheet: <a class="reference download internal" download="" href="../../_downloads/b7c7d8ae1ea387ec1f4e9ef2546dfd94/Trilobit_specs.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Trilobit</span> <span class="pre">specifications</span> <span class="pre">(PDF)</span></code></a>.</p>

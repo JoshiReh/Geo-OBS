@@ -9,7 +9,14 @@ The instructions are given in great detail and should be absolutely sufficient t
 
 A Trilobit is an ocean bottom seismometer (OBS): a self-contained recording station that is placed on the seafloor, records ground motion and pressure for weeks to months without any cable to the surface, and is recovered afterwards to read out the data.
 
-The instrument is the big yellow unit you are standing in front of. Under its yellow housing it contains:
+```{figure} ../assets/trilobit_overview.jpg
+:name: fig_trilobit
+:width: 450px
+
+A Trilobit ocean bottom seismometer. (Placeholder: replace content/assets/trilobit_overview.jpg with an overview photo.)
+```
+
+The instrument is the big yellow unit shown in {numref}`fig_trilobit`. Under its yellow housing it contains:
 
 - **two battery compartments** (A and B), each holding one 10.5 V / 75 Ah alkaline battery,
 - **one recorder module**, the data unit that digitises and stores the data,
@@ -27,9 +34,9 @@ The Trilobit records four seismic channels at the same time:
 
 Recording both kinds of sensors is what makes an OBS powerful. The combination of the three geophone components and the hydrophone allows you to separate the up-going and down-going parts of the wavefield, to distinguish P-waves from S-waves, and to check whether a signal came through the water or through the ground.
 
-In addition to the seismic channels, the Trilobit logs auxiliary channels, among them temperature (aux0), battery voltage (aux1) and tilt (aux5). They are written into the same raw file and are useful for quality control, see {ref}`06_data`.
+In addition to the seismic channels, the Trilobit logs auxiliary channels, among them **temperature'** (aux0), **battery voltage** (aux1) and **tilt** (aux5). They are written into the same raw file and are useful for quality control, see {ref}`06_data`.
 
-The internal clock is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see {ref}`05_recovery`.
+The **internal clock** is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see {ref}`05_recovery`.
 
 ## Facts and Figures
 
@@ -42,8 +49,7 @@ The internal clock is synchronised to GPS time before the deployment, but drifts
 - **Recording:** 24-bit, sample interval 1, 2 or 4 ms (bandwidth up to 400, 200 or 100 Hz)
 - **Storage:** 2 × 64 GB flash, enough for 90 days at 2 ms
 - **Power:** 2 × 10.5 V / 75 Ah alkaline batteries
-- **Battery life:** 40 to 90 days, depending on battery choice (alkaline or lithium); the battery module is rated for 50 days
-- **Clock drift (uncorrected):** about 26 ms after 15 days, 52 ms after 30 days, 155 ms after 90 days
+- **Battery life:** 40 to 90 days, depending on battery choice (alkaline or lithium)
 ```
 
 All numbers are taken from the manufacturer's spec sheet: {download}`Trilobit specifications (PDF) <../assets/docs/Trilobit_specs.pdf>`.
