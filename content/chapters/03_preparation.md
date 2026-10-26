@@ -42,7 +42,9 @@ Ideally you are now standing in front one of the big yellow Trilobits
 
 5.  Begin unscrewing the 4 bolts on the lid of the compartment.
 
-**DANGER:** There can be an immense pressure in the compartment that will result in the solid aluminium cap launching into your face, if you unscrew the bolts to fast. To prevent that **evenly** unscrew the bolts and listen and see how the compartment *reacts* before continuing.
+```{danger}
+There can be an immense pressure in the compartment that will result in the solid aluminium cap launching into your face, if you unscrew the bolts to fast. To prevent that **evenly** unscrew the bolts and listen and see how the compartment *reacts* before continuing.
+```
 
 In most cases you will need screws to push the lid of the compartment. Evenly drill in at least 2 M6 bolts on opposing sites. This can lead to great pressure release, that why it is important to leave the other screws while doing that, as shown in the picture.
 

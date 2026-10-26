@@ -69,28 +69,30 @@ Once connected, feel free to open an issue, whether suggesting improvements or h
 
 ````{grid-item}
 :columns: 4
+:class: funding-logo
 
 ```{image} ./content/assets/UNIS_logo.gif
-:class: m-auto
 :width: 200px
 :target: https://www.unis.no
 ```
 ````
 ````{grid-item}
 :columns: 7
+:class: funding-text
 [UNIS](https://www.unis.no/) supports Geo-OBS by providing the instruments as well as technical and logistical assistance.
 ````
 
 ````{grid-item}
 :columns: 4
+:class: funding-logo
 
 ```{image} ./content/assets/CAFE_logo.gif
-:class: m-auto
 :width: 200px
 ```
 ````
 ````{grid-item}
 :columns: 7
+:class: funding-text
 The development of Geo-OBS is funded by the Centre of Excellence in Arctic Field Education (CAFE) through a FieldSoTL.
 ````
 
