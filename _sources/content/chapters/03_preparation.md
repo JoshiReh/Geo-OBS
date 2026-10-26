@@ -3,21 +3,18 @@
 
 Ideally you are now standing in front one of the big yellow Trilobits
 
-You need:
+```{admonition} What You Need
+:class: tip
+**Hardware**
 
 - 2 Fresh 10.5 V – 75Ah Alkaline Batteries (per Trilobit)
-
 - Multimeter
-
 - 6 mm Hex Allen Key (or electric drill)
-
 - 5 mm Hex Allen Key (or electric drill)
-
 - 2 M6-bolts at least 8 cm long
-
 - Wipes
-
 - (maybe Silicon)
+```
 
 1.  Start by unscrewing these three bold:
 
