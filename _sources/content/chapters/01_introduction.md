@@ -34,7 +34,7 @@ The Trilobit records four seismic channels at the same time:
 
 Recording both kinds of sensors is what makes an OBS powerful. The combination of the three geophone components and the hydrophone allows you to separate the up-going and down-going parts of the wavefield, to distinguish P-waves from S-waves, and to check whether a signal came through the water or through the ground.
 
-In addition to the seismic channels, the Trilobit logs auxiliary channels, among them **temperature'** (aux0), **battery voltage** (aux1) and **tilt** (aux5). They are written into the same raw file and are useful for quality control, see {ref}`06_data`.
+In addition to the seismic channels, the Trilobit logs auxiliary channels, among them **temperature** (aux0), **battery voltage** (aux1) and **tilt** (aux5). They are written into the same raw file and are useful for quality control, see {ref}`06_data`.
 
 The **internal clock** is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see {ref}`05_recovery`.
 
