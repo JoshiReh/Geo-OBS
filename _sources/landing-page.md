@@ -2,7 +2,7 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
-## Operating Trilobit ocean bottom seismometers
+## Operating Trilobit Ocean Bottom Seismometers
 
 ````{margin} Based on Geo-UAV
 
@@ -21,7 +21,7 @@ Geo-OBS is **open for everyone to follow online**. It is meant as an open refere
 
 The instructions are given step by step and in great detail. Please follow each and every step precisely.
 
-### Course content
+### Course Content
 
 Geo-OBS is split into several sessions:
 
@@ -29,11 +29,11 @@ Geo-OBS is split into several sessions:
 - Session 1: {ref}`03_preparation`
 - Session 2: {ref}`04_deployment`
 - Session 3: {ref}`05_recovery`
-- Session 4: {ref}`Decoding and cleaning data <06_data>`
+- Session 4: {ref}`Decoding and Cleaning Data <06_data>`
 - Session 5: {ref}`08_python_processing`
 - Supplementary: {ref}`07_checklists` and {ref}`09_documents`
 
-### Learning outcomes
+### Learning Outcomes
 
 After working through Geo-OBS, you will be able to:
 
@@ -44,14 +44,14 @@ After working through Geo-OBS, you will be able to:
 - ✔️ Display the recorded data
 - ✔️ Process the data with Python: fix the binary header, convert to x, y, z and cut daily files
 
-### Project status
+### Project Status
 
 ```{admonition} Under construction
 :class: warning
 Geo-OBS is still being written. New chapters, pictures and videos are added continuously.
 ```
 
-### Contribute or improve the resource
+### Contribute or Improve the Resource
 
 Notice an unclear section? A typo in the text? Get in touch!
 
@@ -83,15 +83,21 @@ Once connected, feel free to open an issue, whether suggesting improvements or h
 
 ````{grid-item}
 :columns: 4
+
+```{image} ./content/assets/CAFE_logo.gif
+:class: m-auto
+:width: 200px
+```
 ````
 ````{grid-item}
 :columns: 7
-The development of Geo-OBS is funded by **[NAME OF FUNDER / PROJECT, grant number]**.
+The development of Geo-OBS is funded by the Centre of Excellence in Arctic Field Education (CAFE) through a FieldSoTL.
 ````
 
 `````
 
-### Acknowledgements and licensing
+### Acknowledgements and Licensing
+Special thanks to Bent Ole Ruud and XXXX (University of Bergen) for taking the time to teach us how to operate the Trilobit OBS units and for patiently answering our countless questions about deployment, recovery and data processing. 
 
 Geo-OBS is implemented through Jupyter Book and the Executable Book Project. Its structure is based on [Geo-UAV](https://unisvalbard.github.io/Geo-UAV/).
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.

@@ -5,7 +5,7 @@ Welcome to Geo-OBS. This manual is a step-by-step guide to setting up, starting 
 
 The instructions are given in great detail and should be absolutely sufficient to operate a Trilobit. Please follow each and every step precisely.
 
-## What is a Trilobit?
+## What Is a Trilobit?
 
 A Trilobit is an ocean bottom seismometer (OBS): a self-contained recording station that is placed on the seafloor, records ground motion and pressure for weeks to months without any cable to the surface, and is recovered afterwards to read out the data.
 
@@ -18,7 +18,7 @@ The instrument is the big yellow unit you are standing in front of. Under its ye
 
 There is no cable and no live connection while the instrument is on the seafloor. All communication happens before the deployment and after the recovery, through the R-Puck, a wireless interface that is placed on top of the Trilobit and talks to the EDR208 software on the laptop.
 
-## How the signals are recorded
+## How the Signals Are Recorded
 
 The Trilobit records four seismic channels at the same time:
 
@@ -31,7 +31,7 @@ In addition to the seismic channels, the Trilobit logs auxiliary channels, among
 
 The internal clock is synchronised to GPS time before the deployment, but drifts slightly while the instrument is on the seafloor (typically around 50 ms after 30 days). This is why the clock is read out and corrected during the recovery, before the data is downloaded, see {ref}`05_recovery`.
 
-## Facts and figures
+## Facts and Figures
 
 ```{admonition} Key facts
 :class: tip
@@ -48,7 +48,7 @@ The internal clock is synchronised to GPS time before the deployment, but drifts
 
 All numbers are taken from the manufacturer's spec sheet: {download}`Trilobit specifications (PDF) <../assets/docs/Trilobit_specs.pdf>`.
 
-## What can you measure with a Trilobit?
+## What Can You Measure with a Trilobit?
 
 An OBS record is simply a long, continuous recording of everything that moves the seafloor or the water above it. A few simple examples:
 

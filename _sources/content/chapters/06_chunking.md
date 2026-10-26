@@ -1,5 +1,5 @@
 (06_chunking)=
-# Chunking Files that are larger than 2 GB
+# Chunking Files Larger than 2 GB
 
 You should have a file that is already fixed with the command fix_all_ln as explained in step 1-8 in the previous chapter. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.
 

@@ -25,7 +25,7 @@ Software you need (should be on the Laptop):
 
 - Windows Powershell
 
-## Stopping the Trilobit and correcting the time
+## Stopping the Trilobit and Correcting the Time
 
 This step is needed to correct the internal clock of the Trilobit which has a little bit of a drift especially after long deployments.
 
