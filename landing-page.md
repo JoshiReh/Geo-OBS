@@ -29,9 +29,9 @@ Geo-OBS is split into several sessions:
 - Session 1: {ref}`03_preparation`
 - Session 2: {ref}`04_deployment`
 - Session 3: {ref}`05_recovery`
-- Session 4: Decoding and cleaning data ({ref}`06_data`, {ref}`06_chunking`)
-- Session 5: {ref}`08_python_processing` (binary header correction, x, y, z conversion, daily files, QC explorer)
-- Supplementary: {ref}`07_checklists`
+- Session 4: {ref}`Decoding and cleaning data <06_data>`
+- Session 5: {ref}`08_python_processing`
+- Supplementary: {ref}`07_checklists` and {ref}`09_documents`
 
 ### Learning outcomes
 

@@ -1,5 +1,5 @@
 (05_recovery)=
-# Stopping the Trilobit and retrieving the Data
+# Stopping the Recording and Retrieving the Data
 
 Hardware you need:
 
