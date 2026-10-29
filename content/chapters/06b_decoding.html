@@ -248,7 +248,7 @@
 <li class="toctree-l1"><a class="reference internal" href="06_data.html">Downloading the Raw Data</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Decoding the Raw Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06c_segy.html">Converting the Data into SEG-Y Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_chunking.html">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_chunking.html">Chunking Large Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06d_displaying.html">Displaying the Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
@@ -484,16 +484,20 @@
 <span id="decoding"></span><h1>Decoding the Raw Data<a class="headerlink" href="#decoding-the-raw-data" title="Link to this heading">#</a></h1>
 <p>The raw file has to be downloaded and fixed first, see <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>.</p>
 <ol class="arabic simple">
-<li><p>Go back into EDR. Still in the panel “Raw Dev” set the “Operation” to “Scan Raw” and select your raw dataset as you named it in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>.</p></li>
+<li><p>Go back into EDR. In the panel “Convert” set the “Operation” to “Scan Raw” and select your raw dataset as you named it in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>.</p></li>
 <li><p>The panel in EDR should show you when the dataset started and when it stopped.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image42.jpg"><img alt="../../_images/word_image42.jpg" src="../../_images/word_image42.jpg" style="width: 466px;" />
 </a>
 <ol class="arabic simple" start="3">
-<li><p>Now select Operation “Decode Raw”. This should produce 9 new files: 4 .aux files (where aux0 is the temperature, aux1 is the voltage, and aux5 is the tilt) and 4 files .g1,.g2,.g3,.h1 that refer to our geophones and hydrophone in the trilobit. You will also get a text-file that you need later.</p></li>
+<li><p>Now select Operation “Decode Raw” and press “Start Conversion”. This should produce 9 new files: 4 .aux files (where aux0 is the temperature, aux1 is the voltage, and aux5 is the tilt) and 4 files .g1,.g2,.g3,.h1 that refer to our geophones and hydrophone in the trilobit. You will also get a text-file that you need later.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image43.jpg"><img alt="../../_images/word_image43.jpg" src="../../_images/word_image43.jpg" style="width: 373px;" />
 </a>
+<div class="tip admonition">
+<p class="admonition-title">Good to Know</p>
+<p>You can open EDR multiple times and run several decodes at once to minimise the waiting time. This is especially useful if you chunked your dataset before.</p>
+</div>
 <a class="reference internal image-reference" href="../../_images/word_image44.jpg"><img alt="../../_images/word_image44.jpg" src="../../_images/word_image44.jpg" style="width: 411px;" />
 </a>
 </section>

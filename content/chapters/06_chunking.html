@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Chunking Files Larger than 2 GB &#8212; Geo-OBS</title>
+    <title>Chunking Large Files &#8212; Geo-OBS</title>
   
   
   
@@ -248,7 +248,7 @@
 <li class="toctree-l1"><a class="reference internal" href="06_data.html">Downloading the Raw Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06b_decoding.html">Decoding the Raw Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06c_segy.html">Converting the Data into SEG-Y Files</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chunking Files Larger than 2 GB</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chunking Large Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06d_displaying.html">Displaying the Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
@@ -466,7 +466,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Chunking Files Larger than 2 GB</h1>
+    <h1>Chunking Large Files</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -480,17 +480,31 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="chunking-files-larger-than-2-gb">
-<span id="chunking"></span><h1>Chunking Files Larger than 2 GB<a class="headerlink" href="#chunking-files-larger-than-2-gb" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="chunking-large-files">
+<span id="chunking"></span><h1>Chunking Large Files<a class="headerlink" href="#chunking-large-files" title="Link to this heading">#</a></h1>
+<div class="warning admonition">
+<p class="admonition-title">Note</p>
+<p>Whenever you record with the default settings shown in <a class="reference internal" href="04b_start_recording.html#start-recording"><span class="std std-ref">Starting the Recording</span></a> (same sampling interval etc.), you most likely have to chunk your files when you record for more than 10 days.</p>
+</div>
 <p>You should have a file that is already fixed with the command fix_all_ln as explained in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.</p>
 <ol class="arabic simple">
-<li><p>In your “data” folder, create a folder calling it for example like the Trilobit you want to analyze the data from. In my example it is “01069”. Put the fixed Raw file into this folder.</p></li>
-<li><p>In this folder create folders you name “01069_1stChunk”, “01069_2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each containing 4 components that are xxx</p></li>
-<li><p>Go into the EDR program and in the “Scan Raw” panel select “Extract raw”.</p></li>
-<li><p>Select the time and date for your first Chunk e.g. 10 days. (Here I would recommend to start at a time that will be your starting time across all Data analysis. We deployed the Trilobits at 14:32 o’clock and I set the start time to 14:00 UTC, so 16:00 in Svalbard time to let the sediment settle)</p></li>
-<li><p>Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 01069_1stChunk and create a new file and name it the same way. Press “send/okay”.</p></li>
-<li><p>Wait until that has worked and repeat the last 3 steps for the 01069_2ndChunk by changing the time to the next 10 days.</p></li>
-<li><p>Repeat for all chunks until your previous raw-file is chunked into 3 smaller chunked files.</p></li>
+<li><p>In your “data” folder, create a folder calling it like the Trilobit you want to analyze the data from. In my example it is “1069”. Put the fixed Raw file into this folder.</p></li>
+<li><p>In this folder create folders you name “1stChunk”, “2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each about 3 GB. Since this contains 4 components, each component takes about 1.6 GB, which makes them smaller then 2 GB for the next processing steps</p></li>
+<li><p>Go into the EDR program and in the “Convert” panel select “Extract raw”.</p></li>
+<li><p>Select the time and date for your first Chunk. We would recommend 10 days. (Here we would set the start at a time that was our starting time across all Data analysis. We deployed the Trilobits at 12:32 o’clock and I set the start time to 12:00 PM. UTC, so 14:00 in Svalbard summer time to let the sediment settle.)</p></li>
+<li><p>Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 1stChunk and create a new file and name it 1069_1stChunk. Press “send/okay”.</p></li>
+<li><p>Wait until that has worked and repeat by selecting the next 10 days sticking to your time (in our case 07/11/2026 12 PM UTC until 07/21/2026 12 PM UTC)</p></li>
+<li><p>Repeat for all chunks until your previous raw-file is chunked into smaller chunked files.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Good to Know</p>
+<p>We deployed the Trilobits for about 25 days, so the last chunk was just 5 days long, which is totally fine for the rest of this workflow.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Attention</p>
+<p>Don’t forget to copy the files from the “Files to copy into new data folder” folder into each chunk folder before you continue.</p>
+</div>
+<ol class="arabic simple" start="8">
 <li><p>After you have chunked the entire file follow <a class="reference internal" href="06b_decoding.html#decoding"><span class="std std-ref">Decoding the Raw Data</span></a> and <a class="reference internal" href="06c_segy.html#segy"><span class="std std-ref">Converting the Data into SEG-Y Files</span></a>! <strong>You will have to do it separately for each Chunk.</strong></p></li>
 </ol>
 </section>

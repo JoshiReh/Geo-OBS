@@ -69,5 +69,5 @@ cd \Users\unisg\Desktop\Trilobit\
 
 ```{admonition} Attention
 :class: danger
-If your file is **larger** than 2 GB, you cannot continue directly with {ref}`06_decoding`. First you have to **Chunk** the file into subfiles, which is explained in {ref}`06_chunking`!
+If your recording is **longer** than 10 days, you cannot continue directly with {ref}`06_decoding`. First you have to **Chunk** the file into subfiles, which is explained in {ref}`06_chunking`!
 ```
