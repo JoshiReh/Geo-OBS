@@ -61,7 +61,7 @@ If you have never used any terminal like bash before, use “cd” to go to the 
 ```powershell
 cd ..
 cd ..
-cd \Users\unisg\Desktop\Trilobit\
+cd \Users\unisg\Desktop\Trilobit\Data\
 ```
 ````
 
