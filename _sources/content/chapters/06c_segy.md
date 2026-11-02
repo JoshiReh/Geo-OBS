@@ -5,7 +5,7 @@ The raw file has to be decoded first, see {ref}`06_decoding`.
 
 1. You now need to return to Windows Powershell and execute the following commands:
 
-    1.  `.\get_skew.ps1` (note down the number!)
+    1.  `.\get_skew_new.ps1` (note down the number!)
 
     2.  `type .\xxx_seq1.txt` (for xxx insert your file name)
 
@@ -25,7 +25,7 @@ The raw file has to be decoded first, see {ref}`06_decoding`.
 :width: 459px
 ```
 
-4. Press Save and close, then open “Trilobit_RCV”. Here you enter the Skew number, aswell as the Unit Serial Number and the Trilobit number. You just do that in the first row and ignore the other columns. So just adjust the first 3 numbers in row 6! Also here, the digits are separated by a **tab** and not a **space**; that’s why it looks a bit weird in the picture below.
+4. Press Save and close, then open “Trilobit_RCV”. Here you enter the Unit Serial Number (1st number after RC), the Trilobit number (2nd number) and finally instead of Auto the Skew number. You just do that in the first row and ignore the other columns. So just adjust the first 2 and the 4th number in row 6! Also here, the digits are separated by a **tab** and not a **space**; that’s why it looks a bit weird in the picture below.
 
 ```{image} assets/word_image48.jpg
 :width: 519px
