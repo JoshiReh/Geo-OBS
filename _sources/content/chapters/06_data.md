@@ -66,8 +66,3 @@ cd \Users\unisg\Desktop\Trilobit\Data\
 ````
 
 8.  As seen in the last picture write “.\fix_all_ln.ps1” and press “enter”. This will create a new file that has exactly the same name as you named it and will re-name your original file into “old_xxx”. In my case my file is still called “Demonstration” but I also have the file “old_demonstration” which I can **delete**. You may have to type `Set-ExecutionPolicy Unrestricted` in the powershell when an error occurs before trying again.
-
-```{admonition} Attention
-:class: danger
-If your recording is **longer** than 10 days, you cannot continue directly with {ref}`06_decoding`. First you have to **Chunk** the file into subfiles, which is explained in {ref}`06_chunking`!
-```

@@ -16,3 +16,13 @@
 .funding-text p {
   margin: 0;
 }
+
+/* All bold text in dark red so it stands out */
+strong,
+b {
+  color: #9b1c1c;
+}
+html[data-theme="dark"] strong,
+html[data-theme="dark"] b {
+  color: #ff8a80;
+}

@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d44d51df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c1b9a178" />
   
   <!-- So that users can add custom icons -->
   <script defer src="../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -157,6 +157,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -260,6 +264,10 @@
 <li class="toctree-l2"><a class="reference internal" href="08d_segy_qc.html">SEG-Y QC Explorer</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ALTERNATIVE - Trilobit Processor App</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10_app_route.html">Alternative: The Trilobit Processor App</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SUPPLEMENTARY</span></p>
 <ul class="nav bd-sidenav">
@@ -455,7 +463,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -471,6 +481,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-continue">How to Continue</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -482,7 +500,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="decoding-the-raw-data">
 <span id="decoding"></span><h1>Decoding the Raw Data<a class="headerlink" href="#decoding-the-raw-data" title="Link to this heading">#</a></h1>
-<p>The raw file has to be downloaded and fixed first, see <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Before You Start</p>
+<p>If you want to continue with <strong>EDR</strong>, recordings with files larger than 2 GB have to be chunked first, see <a class="reference internal" href="06_chunking.html#chunking"><span class="std std-ref">Chunking Large Files</span></a>. If you work with the beta of the <strong>Trilobit Processor</strong>, which shortens the whole process considerably, you can simply continue here without chunking.</p>
+</div>
 <ol class="arabic simple">
 <li><p>Go back into EDR. In the panel “Convert” set the “Operation” to “Scan Raw” and select your raw dataset as you named it in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>.</p></li>
 <li><p>The panel in EDR should show you when the dataset started and when it stopped.</p></li>
@@ -500,6 +521,31 @@
 </div>
 <a class="reference internal image-reference" href="../../_images/word_image44.jpg"><img alt="../../_images/word_image44.jpg" src="../../_images/word_image44.jpg" style="width: 411px;" />
 </a>
+<section id="how-to-continue">
+<h2>How to Continue<a class="headerlink" href="#how-to-continue" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<strong>EDR</strong></div>
+<p class="sd-card-text">Continue with <strong>EDR</strong>, the original software built for processing OBS data.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="06c_segy.html#segy"><span class="std std-ref">Converting the Data into SEG-Y Files</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<strong>Trilobit Processor (beta)</strong></div>
+<p class="sd-card-text">Continue with the beta of the <strong>Trilobit Processor</strong>, which tries to automate all steps from EDR.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="10_app_route.html#app-route"><span class="std std-ref">Alternative: The Trilobit Processor App</span></a></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -556,6 +602,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-continue">How to Continue</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

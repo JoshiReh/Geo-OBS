@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d44d51df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c1b9a178" />
   
   <!-- So that users can add custom icons -->
   <script defer src="../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
@@ -260,6 +260,10 @@
 <li class="toctree-l2"><a class="reference internal" href="08d_segy_qc.html">SEG-Y QC Explorer</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ALTERNATIVE - Trilobit Processor App</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="10_app_route.html">Alternative: The Trilobit Processor App</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SUPPLEMENTARY</span></p>
 <ul class="nav bd-sidenav">
@@ -489,7 +493,10 @@
 <p>You should have a file that is already fixed with the command fix_all_ln as explained in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.</p>
 <ol class="arabic">
 <li><p>In your “data” folder, create a folder calling it like the Trilobit you want to analyze the data from. In my example it is “1069”. Put the fixed Raw file into this folder.</p></li>
-<li><p>In this folder create folders you name “1stChunk”, “2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each about 3 GB. Since this contains 4 components, each component takes about 1.6 GB, which makes them smaller then 2 GB for the next processing steps</p></li>
+<li><p>In this folder create one sub-folder per chunk and name them “1stChunk”, “2ndChunk”, … How many chunks you need follows from one rule: <strong>after decoding, every single component file (g1, g2, g3, h1) has to be smaller than 2 GB.</strong> The raw file contains all 4 components, so roughly:</p>
+<p><em>size of one component ≈ size of the raw chunk ÷ 4</em></p>
+<p>In our example the raw file of the whole 25-day deployment is 11.8 GB, which is about 0.47 GB per day. A 10-day chunk is therefore about 4.7 GB raw, or about 1.2 GB per component, which is safely below 2 GB. This gives us 3 chunks: 10 + 10 + 5 days.</p>
+</li>
 <li><p>Go into the EDR program and in the “Convert” panel select “Extract raw”.</p></li>
 <li><p>Select the time and date for your first Chunk. We would recommend 10 days. (Here we would set the start at a time that was our starting time across all Data analysis. We deployed the Trilobits at 12:32 o’clock and I set the start time to 12:00 PM. UTC, so 14:00 in Svalbard summer time to let the sediment settle.)</p></li>
 <li><p>Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 1stChunk and create a new file and name it 1069_1stChunk. Press “send/okay”.</p></li>
