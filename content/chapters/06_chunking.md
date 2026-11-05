@@ -10,7 +10,11 @@ You should have a file that is already fixed with the command fix_all_ln as expl
 
 1.  In your “data” folder, create a folder calling it like the Trilobit you want to analyze the data from. In my example it is “1069”. Put the fixed Raw file into this folder.
 
-2.  In this folder create folders you name “1stChunk”, “2ndChunk”… Create as many folders as you need to get the data into Chunks that are smaller then 2 GB. In my example the raw data contains 11.8 GB so I get 3 Chunks each about 3 GB. Since this contains 4 components, each component takes about 1.6 GB, which makes them smaller then 2 GB for the next processing steps
+2.  In this folder create one sub-folder per chunk and name them “1stChunk”, “2ndChunk”, … How many chunks you need follows from one rule: **after decoding, every single component file (g1, g2, g3, h1) has to be smaller than 2 GB.** The raw file contains all 4 components, so roughly:
+
+    *size of one component ≈ size of the raw chunk ÷ 4*
+
+    In our example the raw file of the whole 25-day deployment is 11.8 GB, which is about 0.47 GB per day. A 10-day chunk is therefore about 4.7 GB raw, or about 1.2 GB per component, which is safely below 2 GB. This gives us 3 chunks: 10 + 10 + 5 days.
 
 3.  Go into the EDR program and in the “Convert” panel select “Extract raw”.
 

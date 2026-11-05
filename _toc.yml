@@ -42,6 +42,10 @@ parts:
     - file: content/chapters/08c_segy_daily.md
     - file: content/chapters/08d_segy_qc.md
 
+- caption: ALTERNATIVE - Trilobit Processor App
+  chapters:
+  - file: content/chapters/10_app_route.md
+
 - caption: SUPPLEMENTARY
   chapters:
   - file: content/chapters/07_checklists.md
