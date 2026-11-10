@@ -58,7 +58,12 @@ The weight decouples the Trilobit from the rest of the mooring:
 
 ## Picking Up the Trilobit
 
-```{admonition} Under Construction
-:class: warning
-The description of the recovery at sea will be added soon.
+1. Find the buoy at the noted position and pick it up.
+2. Haul the Trilobit up with the winch or crane, together with the weight and the A-frame. Use at least two people to bring it on deck.
+3. Write down the **pick-up time**.
+4. Clean the Trilobit thoroughly and remove **all the mud** from the housing and the inside. This takes some time, but it is necessary.
+
+```{admonition} Do Not Disconnect the Batteries!
+:class: danger
+**Never disconnect the batteries right after the pick-up!** The Trilobit has to keep running until the recording has been stopped and the time has been corrected, see {ref}`05_recovery`. Only disconnect the batteries after that.
 ```
