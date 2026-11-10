@@ -487,6 +487,7 @@
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need">What You Need</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download">Download</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
 </ul>
             </nav>
@@ -501,27 +502,44 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="alternative-the-trilobit-processor-app">
 <span id="app-route"></span><h1>Alternative: The Trilobit Processor App<a class="headerlink" href="#alternative-the-trilobit-processor-app" title="Link to this heading">#</a></h1>
-<p>The Trilobit Processor app replaces everything <strong>after “Decode Raw”</strong>: the skew readout, the SHT/RCV files, EDR’s “Seis to SEGY” export with drift correction, the chunking and the notebooks of Session 6 (header correction and daily SEG-Y files). Sessions 1-4 and the download, <code class="docutils literal notranslate"><span class="pre">fix_all</span></code> and “Decode Raw” steps of Session 5 stay the same.</p>
+<p>The Trilobit Processor app replaces everything <strong>after “Decode Raw”</strong>: the skew readout, the SHT/RCV files, EDRTest208’s “Seis to SEGY” export with drift correction, the chunking and the notebooks of Session 6 (header correction and daily SEG-Y files). Sessions 1-4 and the download, <code class="docutils literal notranslate"><span class="pre">fix_all</span></code> and “Decode Raw” steps of Session 5 stay the same.</p>
 <div class="warning admonition">
 <p class="admonition-title">Under construction</p>
-<p>This route is still being tested. The app reproduces EDR’s SEG-Y output sample by sample, but please compare with the classic route before relying on it.</p>
+<p>This route is still being tested. The app reproduces EDRTest208’s SEG-Y output sample by sample, but please compare with the classic route before relying on it.</p>
 </div>
 <section id="what-you-need">
 <h2>What You Need<a class="headerlink" href="#what-you-need" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The decoded files of one recording: <code class="docutils literal notranslate"><span class="pre">.g1</span> <span class="pre">.g2</span> <span class="pre">.g3</span> <span class="pre">.h1</span></code>, the <code class="docutils literal notranslate"><span class="pre">.aux</span></code> files and the <code class="docutils literal notranslate"><span class="pre">_seq1.txt</span></code> file from “Decode Raw”.</p></li>
 <li><p>Optional: the <code class="docutils literal notranslate"><span class="pre">.raw</span></code> file in the same folder. The app reads the skew from the decoded files and uses the <code class="docutils literal notranslate"><span class="pre">.raw</span></code> file only as a cross-check.</p></li>
-<li><p>The Trilobit Processor app on a Mac.</p></li>
+<li><p>The Trilobit Processor app on a Mac (Apple Silicon) or a Windows PC, see below.</p></li>
 </ul>
+</section>
+<section id="download">
+<h2>Download<a class="headerlink" href="#download" title="Link to this heading">#</a></h2>
+<p>Download the latest version from the <a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/releases/latest">Trilobit Processor releases</a> on GitHub:</p>
+<ul class="simple">
+<li><p><strong>macOS</strong> (Apple Silicon, M1 or newer): <code class="docutils literal notranslate"><span class="pre">TrilobitProcessor-mac.zip</span></code></p></li>
+<li><p><strong>Windows</strong> (10/11): <code class="docutils literal notranslate"><span class="pre">TrilobitProcessor-windows.zip</span></code></p></li>
+</ul>
+<p>The source code, the tests and the technical details are in the <a class="reference external" href="https://github.com/JoshiReh/trilobit-processor">trilobit-processor repository</a>.</p>
+<div class="tip admonition">
+<p class="admonition-title">First Start</p>
+<p>The app is not signed, so your computer may block it the first time.</p>
+<ul class="simple">
+<li><p><strong>macOS:</strong> right-click the app → <em>Open</em> → <em>Open</em>.</p></li>
+<li><p><strong>Windows:</strong> unzip the whole folder, start <code class="docutils literal notranslate"><span class="pre">Trilobit</span> <span class="pre">Processor.exe</span></code>, and if a blue window appears click <em>More info</em> → <em>Run anyway</em>.</p></li>
+</ul>
+</div>
 </section>
 <section id="workflow">
 <h2>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Download the data, run <code class="docutils literal notranslate"><span class="pre">fix_all</span></code> and “Decode Raw” as described in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a> and <a class="reference internal" href="06b_decoding.html#decoding"><span class="std std-ref">Decoding the Raw Data</span></a>. Decode the <strong>whole</strong> raw file, no chunking needed.</p></li>
-<li><p>Copy the folder with the decoded files to the Mac. The folder and file names can be anything, as long as they contain the 4-digit station number (e.g. <code class="docutils literal notranslate"><span class="pre">full0989</span></code>).</p></li>
+<li><p>Copy the folder with the decoded files to the computer with the app (or run the app directly on the EDRTest208 PC with the Windows version). The folder and file names can be anything, as long as they contain the 4-digit station number (e.g. <code class="docutils literal notranslate"><span class="pre">full0989</span></code>).</p></li>
 <li><p>Open the app and drop the folder into the window.</p></li>
 <li><p>Choose the segment length (e.g. 24 h) and, if you want to cut away transport and deployment, a <strong>start and end time in UTC</strong> (e.g. <code class="docutils literal notranslate"><span class="pre">2026-07-07</span> <span class="pre">16:00</span></code>).</p></li>
-<li><p>Press “Check and process”. The app first checks the data (gaps, skew, serial number) and then writes the segment files into a <code class="docutils literal notranslate"><span class="pre">DailyChunk</span></code> folder next to the data. A report is written into the input folder.</p></li>
+<li><p>Press “Check and process”. The app first checks the data (gaps, skew, serial number) and lists the sample interval, the recording start and end and the new start and end. After 10 s it writes the segment files into a folder like <code class="docutils literal notranslate"><span class="pre">24hourChunks</span></code> next to the data. A report is written into the input folder.</p></li>
 </ol>
 <div class="tip admonition">
 <p class="admonition-title">Good to Know</p>
@@ -597,6 +615,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need">What You Need</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download">Download</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
 </ul>
   </nav></div>
