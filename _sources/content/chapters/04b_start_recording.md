@@ -1,5 +1,5 @@
 (04_start_recording)=
-# Starting the Recording
+# Start Recording
 
 Make sure that the connection to the Trilobit is established as described in {ref}`04_deployment`.
 

@@ -1,5 +1,5 @@
 (04_deployment)=
-# Connecting the Trilobit and Start Recording
+# Connecting the Trilobit
 
 ```{admonition} What You Need
 :class: tip
@@ -30,10 +30,6 @@
 2.  Connect cables as shown and press the “ON-Button” on the back-side of the Control Unit. Make sure, that the cable with the Zip-Tie goes in the correct spot
 
 ```{image} assets/word_image13.jpg
-:width: 412px
-```
-
-```{image} assets/word_image14.jpg
 :width: 412px
 ```
 
