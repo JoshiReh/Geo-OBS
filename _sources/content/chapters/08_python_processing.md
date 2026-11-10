@@ -8,7 +8,7 @@ This session explains the Python notebooks that are used to process the Trilobit
 - {ref}`08_segy_daily`
 - {ref}`08_segy_qc`
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 The notebooks are being cleaned up and will be added soon.
 ```

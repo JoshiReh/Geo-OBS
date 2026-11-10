@@ -5,7 +5,7 @@ The three geophones of the Trilobit are mounted in a Galperin configuration: eac
 
 The background, including the exact orientation and polarity of the sensors in the Trilobit and the conversion matrix, is described in the manufacturer's note {download}`Trilobit geophone configurations (PDF) <../assets/docs/Trilobit_galperin_configuration.pdf>`.
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 The notebook for this step will be added soon.
 ```

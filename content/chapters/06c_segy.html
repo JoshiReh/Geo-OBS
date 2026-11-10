@@ -484,9 +484,9 @@
 <span id="segy"></span><h1>Converting the Data into SEG-Y Files<a class="headerlink" href="#converting-the-data-into-seg-y-files" title="Link to this heading">#</a></h1>
 <p>The raw file has to be decoded first, see <a class="reference internal" href="06b_decoding.html#decoding"><span class="std std-ref">Decoding the Raw Data</span></a>.</p>
 <ol class="arabic simple">
-<li><p>You now need to return to Windows Powershell and execute the following commands:</p>
+<li><p>Return to Windows PowerShell and run the following commands:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">.\get_skew_new.ps1</span></code> (note down the number!)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.\get_skew_new.ps1</span></code> (write down the number!)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">.\xxx_seq1.txt</span></code> (for xxx insert your file name)</p></li>
 </ol>
 </li>
@@ -494,29 +494,29 @@
 <a class="reference internal image-reference" href="../../_images/word_image45.jpg"><img alt="../../_images/word_image45.jpg" src="../../_images/word_image45.jpg" style="width: 477px;" />
 </a>
 <ol class="arabic simple" start="2">
-<li><p>You have to focus on the following numbers:</p></li>
+<li><p>Look for the following numbers:</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image46.png"><img alt="../../_images/word_image46.png" src="../../_images/word_image46.png" style="width: 406px;" />
 </a>
 <ol class="arabic simple" start="3">
-<li><p>Go into the Windows explorer and open the “Trilobit_SHT”-file with Notepad ++. Here you enter the Start end End-time that you just read from the txt file in powershell. Leave the last digit as “0” in both rows. Note that the digits are separated by a <strong>tab</strong> and not a <strong>space</strong>.</p></li>
+<li><p>In the Windows Explorer, open the file “Trilobit_SHT” with Notepad++. Enter the start and end time that you just read from the .txt file in PowerShell. Leave the last digit as “0” in both rows. Note that the numbers are separated by a <strong>tab</strong>, not a <strong>space</strong>.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image47.jpg"><img alt="../../_images/word_image47.jpg" src="../../_images/word_image47.jpg" style="width: 459px;" />
 </a>
 <ol class="arabic simple" start="4">
-<li><p>Press Save and close, then open “Trilobit_RCV”. Here you enter the Unit Serial Number (1st number after RC), the Trilobit number (2nd number) and finally instead of Auto the Skew number. You just do that in the first row and ignore the other columns. So just adjust the first 2 and the 4th number in row 6! Also here, the digits are separated by a <strong>tab</strong> and not a <strong>space</strong>; that’s why it looks a bit weird in the picture below.</p></li>
+<li><p>Save and close the file, then open “Trilobit_RCV”. Enter the unit serial number (1st number after RC), the Trilobit number (2nd number) and, instead of “Auto”, the skew number. Only change the first row and ignore the others. So you only adjust the 1st, 2nd and 4th number in row 6! Here, too, the numbers are separated by a <strong>tab</strong>, not a <strong>space</strong>, which is why it looks a bit odd in the picture below.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image48.jpg"><img alt="../../_images/word_image48.jpg" src="../../_images/word_image48.jpg" style="width: 519px;" />
 </a>
 <ol class="arabic simple" start="5">
-<li><p>The very last step is now to go back into EDR208 and change the operation to “Seis to SEGY”.</p></li>
+<li><p>As the very last step, go back to EDR208 and change the operation to “Seis to SEGY”.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image49.jpg"><img alt="../../_images/word_image49.jpg" src="../../_images/word_image49.jpg" style="width: 428px;" />
 </a>
 <ol class="arabic simple" start="6">
-<li><p>Click on “Start Conversion” and select any of the 4 files you should see now (it will automatically convert the other files as well. You will then be requested to enter the previously modified RCV and SHT file and finally you enter the “header_edr” file.</p></li>
+<li><p>Click “Start Conversion” and select any of the 4 files you now see (the other files are converted automatically as well). You are then asked for the RCV and SHT files you just edited, and finally for the “header_edr” file.</p></li>
 </ol>
-<p><strong>It happens quite easily that you did not save the RCV or SHT file correctly or had a type in it. Then the conversion will cancel and you should revisit those files.</strong></p>
+<p><strong>It happens easily that the RCV or SHT file was not saved correctly or contains a typo. In that case, the conversion is cancelled and you should check those files again.</strong></p>
 <a class="reference internal image-reference" href="../../_images/word_image50.jpg"><img alt="../../_images/word_image50.jpg" src="../../_images/word_image50.jpg" style="width: 519px;" />
 </a>
 <a class="reference internal image-reference" href="../../_images/word_image51.jpg"><img alt="../../_images/word_image51.jpg" src="../../_images/word_image51.jpg" style="width: 520px;" />

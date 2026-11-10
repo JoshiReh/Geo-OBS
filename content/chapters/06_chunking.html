@@ -484,18 +484,18 @@
 <span id="chunking"></span><h1>Chunking Large Files<a class="headerlink" href="#chunking-large-files" title="Link to this heading">#</a></h1>
 <div class="warning admonition">
 <p class="admonition-title">Note</p>
-<p>Whenever you record with the default settings shown in <a class="reference internal" href="04b_start_recording.html#start-recording"><span class="std std-ref">Start Recording</span></a> (same sampling interval etc.), you most likely have to chunk your files when you record for more than 10 days.</p>
+<p>If you record with the default settings shown in <a class="reference internal" href="04b_start_recording.html#start-recording"><span class="std std-ref">Start Recording</span></a> (same sampling interval etc.), you most likely have to chunk your files when you record for more than 10 days.</p>
 </div>
-<p>You should have a file that is already fixed with the command fix_all_ln as explained in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>. If you follow the naming sceme of the next steps you can use the attached python files without any changes other than the data-path.</p>
+<p>You should have a raw file that has already been fixed with <code class="docutils literal notranslate"><span class="pre">fix_all_ln</span></code>, as explained in <a class="reference internal" href="06_data.html#data"><span class="std std-ref">Downloading the Raw Data</span></a>. If you follow the naming scheme of the next steps, you can use the attached Python files without any changes other than the data path.</p>
 <ol class="arabic">
-<li><p>In your “data” folder, create a folder calling it like the Trilobit you want to analyze the data from. In my example it is “1069”. Put the fixed Raw file into this folder.</p></li>
-<li><p>In this folder create one sub-folder per chunk and name them “1stChunk”, “2ndChunk”, … How many chunks you need follows from one rule: <strong>after decoding, every single component file (g1, g2, g3, h1) has to be smaller than 2 GB.</strong> The raw file contains all 4 components, so roughly:</p>
+<li><p>In your “data” folder, create a folder named after the Trilobit whose data you want to analyse. In this example, it is “1069”. Put the fixed raw file into this folder.</p></li>
+<li><p>In this folder, create one subfolder per chunk and name them “1stChunk”, “2ndChunk”, … How many chunks you need follows from one rule: <strong>after decoding, every single component file (g1, g2, g3, h1) has to be smaller than 2 GB.</strong> The raw file contains all 4 components, so roughly:</p>
 <p><em>size of one component ≈ size of the raw chunk ÷ 4</em></p>
-<p>In our example the raw file of the whole 25-day deployment is 11.8 GB, which is about 0.47 GB per day. A 10-day chunk is therefore about 4.7 GB raw, or about 1.2 GB per component, which is safely below 2 GB. This gives us 3 chunks: 10 + 10 + 5 days.</p>
+<p>In our example, the raw file of the whole 25-day deployment is 11.8 GB, which is about 0.47 GB per day. A 10-day chunk is therefore about 4.7 GB raw, or about 1.2 GB per component, which is safely below 2 GB. This gives us 3 chunks: 10 + 10 + 5 days.</p>
 </li>
-<li><p>Go into the EDR program and in the “Convert” panel select “Extract raw”.</p></li>
-<li><p>Select the time and date for your first Chunk. We would recommend 10 days. (Here we would set the start at a time that was our starting time across all Data analysis. We deployed the Trilobits at 12:32 o’clock and I set the start time to 12:00 PM. UTC, so 14:00 in Svalbard summer time to let the sediment settle.)</p></li>
-<li><p>Check the box “use convert times” and press “start conversion”. Select the raw file first before going into your folder 1stChunk and create a new file and name it 1069_1stChunk. Press “send/okay”.</p></li>
+<li><p>In EDR208, go to the “Convert” panel and select “Extract raw”.</p></li>
+<li><p>Select the date and time for your first chunk. We recommend 10 days. (Choose a start time that you use as the common start for all of your data analysis. We deployed the Trilobits at 12:32 and set the start time to 12:00 UTC, which is 14:00 Svalbard summer time, to let the sediment settle.)</p></li>
+<li><p>Check the box “use convert times” and press “Start Conversion”. First select the raw file, then go into the folder “1stChunk”, create a new file and name it “1069_1stChunk”. Press “Send”/“OK”.</p></li>
 <li><p>Wait until that has worked and repeat for the next chunk. <strong>Let every new chunk start 10 minutes before the previous chunk ended</strong>, so that neighbouring chunks overlap by 10 minutes. The end time stays on your regular grid. In our case:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -521,12 +521,12 @@
 </table>
 </div>
 </li>
-<li><p>Repeat for all chunks until your previous raw-file is chunked into smaller, slightly overlapping files.</p></li>
+<li><p>Repeat this until the whole raw file is split into smaller, slightly overlapping files.</p></li>
 </ol>
 <div class="tip admonition">
 <p class="admonition-title">Good to Know: Skew and Why the Chunks Overlap</p>
 <p>The internal clock of the Trilobit drifts slightly while it is on the seafloor. The difference between the Trilobit clock and the GPS time at the end of the deployment is called the <strong>skew</strong>. You read it out with <code class="docutils literal notranslate"><span class="pre">get_skew_new.ps1</span></code> and enter it in the RCV file, see <a class="reference internal" href="06c_segy.html#segy"><span class="std std-ref">Converting the Data into SEG-Y Files</span></a>, so that EDR can correct the time of every sample.</p>
-<p>Because of this correction, the samples of a chunk do not sit exactly on the times you selected when you cut it. If two chunks met exactly at 12:00, a few samples right at the border could be lost. The 10 minutes overlap makes sure that no data is lost between two chunks. Keep in mind that these 10 minutes are then contained in two chunks, so remove the doubled part when you later combine the chunks again.</p>
+<p>Because of this correction, the samples of a chunk do not sit exactly on the times you selected when you cut it. If two chunks met exactly at 12:00, a few samples right at the border could be lost. The 10-minute overlap makes sure that no data is lost between two chunks. Keep in mind that these 10 minutes are then contained in two chunks, so remove the doubled part when you later combine the chunks again.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Good to Know</p>
@@ -537,7 +537,7 @@
 <p>Don’t forget to copy the files from the “Files to copy into new data folder” folder into each chunk folder before you continue.</p>
 </div>
 <ol class="arabic simple" start="8">
-<li><p>After you have chunked the entire file follow <a class="reference internal" href="06b_decoding.html#decoding"><span class="std std-ref">Decoding the Raw Data</span></a> and <a class="reference internal" href="06c_segy.html#segy"><span class="std std-ref">Converting the Data into SEG-Y Files</span></a>! <strong>You will have to do it separately for each Chunk.</strong></p></li>
+<li><p>After you have chunked the entire file, follow <a class="reference internal" href="06b_decoding.html#decoding"><span class="std std-ref">Decoding the Raw Data</span></a> and <a class="reference internal" href="06c_segy.html#segy"><span class="std std-ref">Converting the Data into SEG-Y Files</span></a>. <strong>You have to do this separately for each chunk.</strong></p></li>
 </ol>
 </section>
 

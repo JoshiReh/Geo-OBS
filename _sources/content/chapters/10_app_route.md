@@ -1,9 +1,9 @@
 (10_app_route)=
 # Alternative: The Trilobit Processor App
 
-The Trilobit Processor app replaces everything **after "Decode Raw"**: the skew readout, the SHT/RCV files, EDRTest208's "Seis to SEGY" export with drift correction, the chunking and the notebooks of Session 6 (header correction and daily SEG-Y files). Sessions 1-4 and the download, `fix_all` and "Decode Raw" steps of Session 5 stay the same.
+The Trilobit Processor app replaces everything **after "Decode Raw"**: the skew readout, the SHT/RCV files, EDRTest208's "Seis to SEGY" export with drift correction, the chunking and the notebooks of Session 6 (header correction and daily SEG-Y files). Sessions 1–4 and the download, `fix_all` and "Decode Raw" steps of Session 5 stay the same.
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 This route is still being tested. The app reproduces EDRTest208's SEG-Y output sample by sample, but please compare with the classic route before relying on it.
 ```
@@ -26,6 +26,7 @@ The source code, the tests and the technical details are in the [trilobit-proces
 ```{admonition} First Start
 :class: tip
 The app is not signed, so your computer may block it the first time.
+
 - **macOS:** right-click the app → *Open* → *Open*.
 - **Windows:** unzip the whole folder, start `Trilobit Processor.exe`, and if a blue window appears click *More info* → *Run anyway*.
 ```
@@ -34,7 +35,7 @@ The app is not signed, so your computer may block it the first time.
 
 <video src="../../_static/trilobit_processor_howto.mp4" width="100%" autoplay loop muted playsinline controls></video>
 
-1. Download the data, run `fix_all` and "Decode Raw" as described in {ref}`06_data` and {ref}`06_decoding`. Decode the **whole** raw file, no chunking needed.
+1. Download the data, run `fix_all` and "Decode Raw" as described in {ref}`06_data` and {ref}`06_decoding`. Decode the **whole** raw file; no chunking is needed.
 2. Copy the folder with the decoded files to the computer with the app (or run the app directly on the EDRTest208 PC with the Windows version). The folder and file names can be anything, as long as they contain the 4-digit station number (e.g. `full0989`).
 3. Open the app and drop the folder into the window.
 4. Choose the segment length (e.g. 24 h) and, if you want to cut away transport and deployment, a **start and end time in UTC** (e.g. `2026-07-07 16:00`).

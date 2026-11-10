@@ -486,19 +486,19 @@
 <p class="admonition-title">Attention</p>
 <p>Follow these instructions precisely. It is very easy to mess something up if one step is not executed properly.</p>
 </div>
-<p>Make sure that the batteries are <strong>disconnected</strong> before starting the Downloading Process.</p>
+<p>Make sure that the batteries are <strong>disconnected</strong> before you start the download.</p>
 <ol class="arabic simple">
 <li><p>Remove the copper cap from the data unit.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image34.jpg"><img alt="../../_images/word_image34.jpg" src="../../_images/word_image34.jpg" style="width: 349px;" />
 </a>
 <ol class="arabic simple" start="2">
-<li><p>You can now connect the data cable and screw on its copper nut, so that it is firmly attached to the data unit.</p></li>
+<li><p>Connect the data cable and screw on its copper nut so that it is firmly attached to the data unit.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image35.jpg"><img alt="../../_images/word_image35.jpg" src="../../_images/word_image35.jpg" style="width: 349px;" />
 </a>
 <ol class="arabic simple" start="3">
-<li><p>Connect the USB end of the cable to the <strong>right side</strong> of the Laptop. As usual when plugging in a device into a PC, a window will appear. <strong>You have to press “Cancel”, “OK”, “Cancel”.</strong></p></li>
+<li><p>Connect the USB end of the cable to the <strong>right side</strong> of the laptop. As usual when you plug a device into a PC, a window will appear. <strong>You have to press “Cancel”, “OK”, “Cancel”.</strong></p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image36.jpg"><img alt="../../_images/word_image36.jpg" src="../../_images/word_image36.jpg" style="width: 279px;" />
 </a>
@@ -507,24 +507,24 @@
 <a class="reference internal image-reference" href="../../_images/word_image38.jpg"><img alt="../../_images/word_image38.jpg" src="../../_images/word_image38.jpg" style="width: 227px;" />
 </a>
 <ol class="arabic simple" start="4">
-<li><p>If you haven’t already, open EDR as Administrator and navigate to the Panel “Raw dev”. Press the button “Start Raw Routine” and create a new file by simply choosing a location to store and writing your desired name. In this case, I named the Raw-file “Demonstration”. Click “Save”.</p></li>
+<li><p>If you haven’t already, open EDR208 as administrator and go to the “Raw dev” panel. Press “Start Raw Routine” and create a new file by choosing a storage location and entering a name. In this example, the raw file is called “Demonstration”. Click “Save”.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image39.jpg"><img alt="../../_images/word_image39.jpg" src="../../_images/word_image39.jpg" style="width: 273px;" />
 </a>
 <ol class="arabic simple" start="5">
-<li><p>In your Explorer, check that the file contains data. Depending on the recording length, it can be multiple GB.</p></li>
-<li><p>In this very important step, you have to copy all files that are in the folder “Files to copy into new data folder”, into the folder where your Raw file is located. Most of the files will be used by a couple scripts that you have to run in the next few steps.</p></li>
+<li><p>In the Windows Explorer, check that the file contains data. Depending on the recording length, it can be several GB.</p></li>
+<li><p>In this very important step, copy all files from the folder “Files to copy into new data folder” into the folder where your raw file is located. Most of these files are used by the scripts that you run in the next steps.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image40.jpg"><img alt="../../_images/word_image40.jpg" src="../../_images/word_image40.jpg" style="width: 519px;" />
 </a>
 <ol class="arabic simple" start="7">
-<li><p>Open Windows Powershell as Administrator and navigate to the folder. In my case it looks like this:</p></li>
+<li><p>Open Windows PowerShell as administrator and navigate to the folder. In this example, it looks like this:</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/word_image41.jpg"><img alt="../../_images/word_image41.jpg" src="../../_images/word_image41.jpg" style="width: 338px;" />
 </a>
 <div class="tip admonition">
 <p class="admonition-title">New to the Terminal?</p>
-<p>If you have never used any terminal like bash before, use “cd” to go to the next folder like “cd \next folder\data”. If you want to jump back from “data” to “next folder” use the command “cd ..”. To list all files in one folder press “ls”. You should be able to copy paste the following commands to get to the Trilobit folder once you open powershell:</p>
+<p>If you have never used a terminal before: use “cd” to go into a folder, e.g. “cd \next folder\data”. To go back from “data” to “next folder”, use “cd ..”. To list all files in a folder, type “ls”. You should be able to copy and paste the following commands to get to the Trilobit folder once you have opened PowerShell:</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd </span><span class="p">..</span>
 <span class="nb">cd </span><span class="p">..</span>
 <span class="nb">cd </span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">unisg</span><span class="p">\</span><span class="n">Desktop</span><span class="p">\</span><span class="n">Trilobit</span><span class="p">\</span><span class="n">Data</span><span class="p">\</span>
@@ -532,7 +532,7 @@
 </div>
 </div>
 <ol class="arabic simple" start="8">
-<li><p>As seen in the last picture write “.\fix_all_ln.ps1” and press “enter”. This will create a new file that has exactly the same name as you named it and will re-name your original file into “old_xxx”. In my case my file is still called “Demonstration” but I also have the file “old_demonstration” which I can <strong>delete</strong>. You may have to type <code class="docutils literal notranslate"><span class="pre">Set-ExecutionPolicy</span> <span class="pre">Unrestricted</span></code> in the powershell when an error occurs before trying again.</p></li>
+<li><p>As shown in the last picture, type “.\fix_all_ln.ps1” and press Enter. This creates a new file with exactly the same name as your raw file and renames the original file to “old_xxx”. In this example, the file is still called “Demonstration”, and there is also a file “old_demonstration”, which can be <strong>deleted</strong>. If an error occurs, type <code class="docutils literal notranslate"><span class="pre">Set-ExecutionPolicy</span> <span class="pre">Unrestricted</span></code> in PowerShell and try again.</p></li>
 </ol>
 </section>
 
