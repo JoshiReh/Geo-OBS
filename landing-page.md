@@ -2,7 +2,7 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
-## Operating Trilobit Ocean Bottom Seismometers
+## A Teaching Manual for Operating Trilobit Ocean Bottom Seismometers
 
 ````{margin} Based on Geo-UAV
 
@@ -15,10 +15,6 @@ This manual is designed for students, as well as scientific and technical staff,
 
 ### About Geo-OBS
 
-```{admonition} Open access
-Geo-OBS is **open for everyone to follow online**. It is meant as an open reference work for operating Trilobit ocean bottom seismometers in the field.
-```
-
 The instructions are given step by step and in great detail. Please follow each and every step precisely.
 
 ```{admonition} Usage Restrictions
@@ -27,7 +23,7 @@ The Trilobit units used at UNIS were given free of charge to the University of B
 
 - may be used for **academic research only**,
 - may only be deployed in **Norwegian waters** (including Svalbard),
-- must **not be dismantled** to use parts for other purposes. The hydrophone is subject to US export restrictions.
+- must **not be dismantled** to use parts for other purposes.
 ```
 
 ### Course Content
@@ -41,18 +37,19 @@ Geo-OBS is split into several sessions:
 - Session 4: {ref}`05_recovery`
 - Session 5: {ref}`Downloading, Decoding and Converting the Data <06_data>`
 - Session 6: {ref}`08_python_processing`
-- Supplementary: {ref}`07_checklists` and {ref}`09_documents`
+- Alternative path: {ref}`10_app_route`
+- Supplementary: {ref}`09_documents`
 
 ### Learning Outcomes
 
 After working through Geo-OBS, you will be able to:
 
-- ✔️ Set up the hardware and change the batteries of a Trilobit
-- ✔️ Connect to the Trilobit and start a recording
-- ✔️ Stop the Trilobit and correct the time after recovery
-- ✔️ Download the RAW data and convert it into SEG-Y files
-- ✔️ Display the recorded data
-- ✔️ Process the data with Python
+✔️ Set up the hardware and change the batteries of a Trilobit\
+✔️ Connect to the Trilobit and start a recording\
+✔️ Stop the Trilobit and correct the time after recovery\
+✔️ Download the RAW data and convert it into (chunked) SEG-Y files\
+✔️ Display the recorded data\
+✔️ Process the data with Python
 
 ### Project Status
 

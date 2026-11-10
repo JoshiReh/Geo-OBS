@@ -46,7 +46,6 @@ parts:
 
 - caption: SUPPLEMENTARY
   chapters:
-  - file: content/chapters/07_checklists.md
   - file: content/chapters/09_documents.md
 
 - caption: EXTERNAL LINKS
