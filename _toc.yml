@@ -13,8 +13,7 @@ parts:
 - caption: SESSION 2 - Start Recording
   chapters:
   - file: content/chapters/04_deployment.md
-    sections:
-    - file: content/chapters/04b_start_recording.md
+  - file: content/chapters/04b_start_recording.md
 
 - caption: SESSION 3 - Field Deployment
   chapters:
