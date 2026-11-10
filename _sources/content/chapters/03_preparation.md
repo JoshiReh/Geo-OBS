@@ -60,9 +60,19 @@ In most cases you will need screws to push the lid of the compartment. Evenly dr
 
 7.  Make sure all O-rings are in smooth shape on the lid, and check if there is silicone on them. It should feel a little oily.
 
-```{image} assets/word_image9.jpg
-:width: 320px
+````{grid} 2 2 2 2
+
+```{grid-item}
+:child-align: center
+![O-rings on the lid](assets/word_image9.jpg)
 ```
+
+```{grid-item}
+:child-align: center
+![Alkaline battery pack](assets/battery_alkaline.jpg)
+```
+
+````
 
 8.  Insert a new battery and reconnect the wire from the lid, before evenly screwing the lid back on the compartment. One of the 4 screw is likely missing the little spacer, most likely to ground any electrical currents.
 

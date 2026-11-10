@@ -11,9 +11,9 @@ A Trilobit is an ocean bottom seismometer (OBS): a self-contained recording stat
 
 ```{figure} ../assets/trilobit_overview.jpg
 :name: fig_trilobit
-:width: 450px
+:width: 400px
 
-A Trilobit ocean bottom seismometer. (Placeholder: replace content/assets/trilobit_overview.jpg with an overview photo.)
+Five Trilobit ocean bottom seismometers, ready for transport.
 ```
 
 The instrument is the big yellow unit shown in {numref}`fig_trilobit`. Under its yellow housing it contains:
