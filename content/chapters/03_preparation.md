@@ -1,95 +1,119 @@
 (03_preparation)=
 # Setup of Hardware and Batteries
 
-Ideally you are now standing in front one of the big yellow Trilobits
+Ideally, you are now standing in front of one of the big yellow Trilobits.
 
 ```{admonition} What You Need
 :class: tip
 **Hardware**
 
-- 2 Fresh 10.5 V – 75Ah Alkaline Batteries (per Trilobit)
+- 2 fresh 10.5 V / 75 Ah alkaline batteries (per Trilobit)
 - Multimeter
-- 6 mm Hex Allen Key (or electric drill)
-- 5 mm Hex Allen Key (or electric drill)
-- 2 M6-bolts at least 8 cm long
+- 6 mm hex Allen key (or electric drill)
+- 5 mm hex Allen key (or electric drill)
+- 2 M6 bolts, at least 8 cm long
 - Wipes
-- (maybe Silicon)
+- Silicone grease (if needed)
 ```
 
-1.  Start by unscrewing these three bold:
+1. Start by unscrewing these three bolts:
 
-```{image} assets/word_image1.jpg
-:width: 292px
-```
+   ```{image} assets/word_image1.jpg
+   :alt: The three bolts of the housing
+   :height: 400px
+   :align: center
+   ```
 
-2.  You can now take of the lid. Use the handles on the side. The Trilobit consist of 2 battery compartments, 1 data unit and of course the Hydrophone and 3 Geophones.
+2. Take off the yellow housing, using the handles on the sides. Underneath you find two battery compartments (A and B), one data unit, the hydrophone and three geophones.
 
-```{image} assets/word_image3.jpg
-:width: 503px
-```
+   ```{image} assets/word_image3.jpg
+   :alt: Trilobit with the housing removed
+   :height: 400px
+   :align: center
+   ```
 
-3.  Take out the first Battery and unscrew the plastic cap.
+3. Take out the first battery compartment and unscrew the plastic cap.
 
-```{image} assets/word_image4.jpg
-:width: 389px
-```
+   ```{image} assets/word_image4.jpg
+   :alt: Battery compartment with plastic cap
+   :height: 400px
+   :align: center
+   ```
 
-4.  Measure the voltage like shown using the Multimeter. When voltage is below 10.5 V exchange the battery for a new one.
+4. Measure the voltage with the multimeter as shown. If it is below 10.5 V, replace the battery with a new one.
 
-```{image} assets/word_image5.jpg
-:width: 267px
-```
+   ```{image} assets/word_image5.jpg
+   :alt: Measuring the battery voltage
+   :height: 400px
+   :align: center
+   ```
 
-5.  Begin unscrewing the 4 bolts on the lid of the compartment.
+5. Start unscrewing the four bolts on the lid of the compartment.
 
-```{danger}
-There can be an immense pressure in the compartment that will result in the solid aluminium cap launching into your face, if you unscrew the bolts to fast. To prevent that **evenly** unscrew the bolts and listen and see how the compartment *reacts* before continuing.
-```
+   ```{danger}
+   The compartment can be under immense pressure. If you unscrew the bolts too fast, the solid aluminium lid can shoot out into your face. Unscrew the bolts **evenly**, and listen and watch how the compartment *reacts* before you continue.
+   ```
 
-In most cases you will need screws to push the lid of the compartment. Evenly drill in at least 2 M6 bolts on opposing sites. This can lead to great pressure release, that why it is important to leave the other screws while doing that, as shown in the picture.
+   In most cases you will need bolts to push the lid out of the compartment. Evenly screw in at least two M6 bolts on opposite sides. This can release a lot of pressure, which is why the other bolts must stay in place while you do this, as shown in the picture.
 
-```{image} assets/word_image6.jpg
-:width: 324px
-```
+   ```{image} assets/word_image6.jpg
+   :alt: M6 bolts pushing the lid out
+   :height: 400px
+   :align: center
+   ```
 
-6.  Disconnect the cable from the lid and the battery by simply pulling gently on it. Take out the battery and clean the interface of the lid and the rest of the compartment. Make sure there is no debris on any of these contact points as it could prevent the compartment from sealing correctly.
+6. Gently pull the cable to disconnect it from the battery. Take out the battery and clean the contact surfaces of the lid and the compartment. Make sure there is no debris left, as it could prevent the compartment from sealing properly.
 
-```{image} assets/word_image8.jpg
-:width: 286px
-```
+   ```{image} assets/word_image8.jpg
+   :alt: Lid and compartment after removing the battery
+   :height: 400px
+   :align: center
+   ```
 
-7.  Make sure all O-rings are in smooth shape on the lid, and check if there is silicone on them. It should feel a little oily.
+7. Check that all O-rings on the lid are in good shape and have silicone grease on them. They should feel slightly oily.
 
-````{grid} 2 2 2 2
+   `````{grid} 2 2 2 2
 
-```{grid-item}
-:child-align: center
-![O-rings on the lid](assets/word_image9.jpg)
-```
+   ````{grid-item}
+   :child-align: center
+   ```{image} assets/word_image9.jpg
+   :alt: O-rings on the lid
+   :height: 400px
+   :align: center
+   ```
+   ````
 
-```{grid-item}
-:child-align: center
-![Alkaline battery pack](assets/battery_alkaline.jpg)
-```
+   ````{grid-item}
+   :child-align: center
+   ```{image} assets/battery_alkaline.jpg
+   :alt: Alkaline battery pack
+   :height: 400px
+   :align: center
+   ```
+   ````
 
-````
+   `````
 
-8.  Insert a new battery and reconnect the wire from the lid, before evenly screwing the lid back on the compartment. One of the 4 screw is likely missing the little spacer, most likely to ground any electrical currents.
+8. Insert the new battery (see picture above) and reconnect the cable from the lid. Then screw the lid back on, tightening the bolts evenly. One of the four bolts is usually missing the small spacer. This is most likely for grounding.
 
-9.  Measure the voltage to make sure that the new battery and the connection works.
+9. Measure the voltage again to make sure that the new battery and the connection work.
 
-```{image} assets/word_image10.jpg
-:width: 303px
-```
+   ```{image} assets/word_image10.jpg
+   :alt: Measuring the voltage of the new battery
+   :height: 400px
+   :align: center
+   ```
 
-10. Repeat for the second battery.
+10. Repeat steps 3 to 9 for the second battery.
 
-11. If necessary clean the inside of the Trilobit a bit.
+11. If necessary, clean the inside of the Trilobit.
 
-12. Place the freshly installed battery in the corresponding position. Make sure that compartment A goes into the spot of A (see in Picture 2).
+12. Put the battery compartments back into their positions. Make sure that compartment A goes into slot A (see the picture in step 2).
 
-13. If you don’t want to start the Trilobit immediately, just pop the yellow housing back on. Make sure to not clamp the battery connecting cables between the battery compartment and the housing. The housing can only go on in a certain orientation.
+13. If you do not want to start the Trilobit right away, put the yellow housing back on. Make sure not to pinch the battery cables between the battery compartment and the housing. The housing only fits in one orientation.
 
-```{image} assets/word_image11.jpg
-:width: 381px
-```
+   ```{image} assets/word_image11.jpg
+   :alt: Trilobit with the housing back on
+   :height: 400px
+   :align: center
+   ```
