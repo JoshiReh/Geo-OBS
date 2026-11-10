@@ -3,18 +3,18 @@
 
 ```{admonition} Before You Start
 :class: warning
-If you want to continue with **EDR**, recordings with files larger than 2 GB have to be chunked first, see {ref}`06_chunking`. If you work with the beta of the **Trilobit Processor**, which shortens the whole process considerably, you can simply continue here without chunking.
+If you want to continue with **EDR**, recordings that produce files larger than 2 GB have to be chunked first, see {ref}`06_chunking`. If you work with the beta of the **Trilobit Processor**, which shortens the whole process considerably, you can simply continue here without chunking.
 ```
 
-1.  Go back into EDR. In the panel "Convert" set the “Operation” to “Scan Raw” and select your raw dataset as you named it in {ref}`06_data`.
+1.  Go back to EDR208. In the “Convert” panel, set the “Operation” to “Scan Raw” and select the raw dataset you created in {ref}`06_data`.
 
-2. The panel in EDR should show you when the dataset started and when it stopped.
+2. The panel should now show when the dataset starts and when it ends.
 
 ```{image} assets/word_image42.jpg
 :width: 466px
 ```
 
-3. Now select Operation “Decode Raw” and press "Start Conversion". This should produce 9 new files: 4 .aux files (where aux0 is the temperature, aux1 is the voltage, and aux5 is the tilt) and 4 files .g1,.g2,.g3,.h1 that refer to our geophones and hydrophone in the trilobit. You will also get a text-file that you need later.
+3. Now select the operation “Decode Raw” and press “Start Conversion”. This produces 9 new files: 4 .aux files (aux0 is the temperature, aux1 the voltage and aux5 the tilt), 4 files .g1, .g2, .g3 and .h1 for the geophones and the hydrophone of the Trilobit, and a text file that you will need later.
 
 ```{image} assets/word_image43.jpg
 :width: 373px
@@ -22,7 +22,7 @@ If you want to continue with **EDR**, recordings with files larger than 2 GB hav
 
 ```{admonition} Good to Know
 :class: tip
-You can open EDR multiple times and run several decodes at once to minimise the waiting time. This is especially useful if you chunked your dataset before.
+You can open EDR208 several times and run several decodings at once to reduce the waiting time. This is especially useful if you chunked your dataset before.
 ```
 
 ```{image} assets/word_image44.jpg

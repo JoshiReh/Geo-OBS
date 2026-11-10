@@ -3,7 +3,7 @@
 
 This notebook cuts a long-term SEG-Y recording into one file per day.
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 The notebook for this step will be added soon.
 ```

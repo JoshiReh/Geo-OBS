@@ -3,7 +3,7 @@
 
 This notebook is used to check the quality of the SEG-Y files.
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 The notebook for this step will be added soon.
 ```

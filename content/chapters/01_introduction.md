@@ -74,7 +74,7 @@ An OBS record is simply a long, continuous recording of everything that moves th
 - **Ships and other man-made sources.** Passing vessels are clearly visible on the hydrophone channel and often have to be removed before further analysis.
 - **Active-source experiments.** If an air gun or another controlled source is fired during the deployment, the Trilobit records the reflected and refracted waves, and the data can be used to image the structure below the seafloor.
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 This introduction is still being extended. Pictures of the instrument and of example recordings will be added.
 ```

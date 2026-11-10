@@ -55,7 +55,7 @@ After working through Geo-OBS, you will be able to:
 
 ### Project Status
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 Geo-OBS is still being written. New chapters, pictures and videos are added continuously.
 ```

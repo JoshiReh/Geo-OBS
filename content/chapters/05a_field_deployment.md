@@ -3,7 +3,7 @@
 
 This chapter explains how the Trilobit is brought to the seafloor from a vessel and how it is picked up again.
 
-```{admonition} Under construction
+```{admonition} Under Construction
 :class: warning
 This chapter is still being written.
 ```
@@ -18,7 +18,7 @@ This chapter is still being written.
 - TODO: complete the list
 ```
 
-## Setting up the A-Frame
+## Setting Up the A-Frame
 
 TODO: how to set up and operate the A-frame.
 
@@ -30,6 +30,6 @@ TODO: how to choose the rope length for the water depth, and which weights to us
 
 TODO: step-by-step deployment. Write down the deployment time and position.
 
-## Picking up the Trilobit
+## Picking Up the Trilobit
 
 TODO: step-by-step recovery from the seafloor. Write down the pick-up time.
