@@ -34,7 +34,7 @@ The Trilobit units used at UNIS were given free of charge to the University of B
 
 Geo-OBS is split into several sessions:
 
-- {ref}`01_introduction` and {ref}`02_components`
+- {ref}`01_introduction`
 - Session 1: {ref}`03_preparation`
 - Session 2: {ref}`04_deployment`
 - Session 3: {ref}`05a_field_deployment`
@@ -109,7 +109,7 @@ The development of Geo-OBS is funded by the Centre of Excellence in Arctic Field
 `````
 
 ### Acknowledgements and Licensing
-Special thanks to Bent Ole Ruud and Franck Arnljot Andersen (University of Bergen) for taking the time to teach us how to operate the Trilobit OBS units and for patiently answering our countless questions about deployment, recovery and data processing. Franck worked with the Trilobits when they were used in the seismic industry.
+Special thanks to Bent Ole Ruud and Franck Arnljot Andersen (University of Bergen) for taking the time to teach us how to operate the Trilobit OBS units and for patiently answering our countless questions about deployment, recovery and data processing.
 
 Geo-OBS is implemented through Jupyter Book and the Executable Book Project. Its structure is based on [Geo-UAV](https://unisvalbard.github.io/Geo-UAV/).
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
