@@ -32,6 +32,7 @@ The app is not signed, so your computer may block it the first time.
 
 ## Workflow
 
+<video src="../../_static/trilobit_processor_howto.mp4" width="100%" autoplay loop muted playsinline controls></video>
 
 1. Download the data, run `fix_all` and "Decode Raw" as described in {ref}`06_data` and {ref}`06_decoding`. Decode the **whole** raw file, no chunking needed.
 2. Copy the folder with the decoded files to the computer with the app (or run the app directly on the EDRTest208 PC with the Windows version). The folder and file names can be anything, as long as they contain the 4-digit station number (e.g. `full0989`).
