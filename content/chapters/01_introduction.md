@@ -25,6 +25,15 @@ The instrument is the big yellow unit shown in {numref}`fig_trilobit`. Under its
 
 There is no cable and no live connection while the instrument is on the seafloor. All communication happens before the deployment and after the recovery, through the R-Puck, a wireless interface that is placed on top of the Trilobit and talks to the EDR208 software on the laptop.
 
+```{admonition} Usage Restrictions
+:class: important
+The Trilobit units used at UNIS were given free of charge to the University of Bergen (UiB) by Seabed Geosolutions (now merged with PxGeo). According to this agreement, the Trilobits:
+
+- may be used for **academic research only**,
+- may only be deployed in **Norwegian waters** (including Svalbard),
+- must **not be dismantled** to use parts for other purposes. The hydrophone is subject to US export restrictions.
+```
+
 ## How the Signals Are Recorded
 
 The Trilobit records four seismic channels at the same time:
