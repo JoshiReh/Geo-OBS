@@ -31,7 +31,7 @@ The Trilobit units used at UNIS were given free of charge to the University of B
 
 - may be used for **academic research only**,
 - may only be deployed in **Norwegian waters** (including Svalbard),
-- must **not be dismantled** to use parts for other purposes. The hydrophone is subject to US export restrictions.
+- must **not be dismantled** to use parts for other purposes.
 ```
 
 ## How the Signals Are Recorded
