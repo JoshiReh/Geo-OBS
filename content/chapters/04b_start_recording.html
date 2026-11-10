@@ -483,34 +483,30 @@
   <section class="tex2jax_ignore mathjax_ignore" id="start-recording">
 <span id="id1"></span><h1>Start Recording<a class="headerlink" href="#start-recording" title="Link to this heading">#</a></h1>
 <p>Make sure that the connection to the Trilobit is established as described in <a class="reference internal" href="04_deployment.html#deployment"><span class="std std-ref">Connecting the Trilobit</span></a>.</p>
-<ol class="arabic simple">
-<li><p>Go to the panel Script/Log in EDR</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image29.jpg"><img alt="../../_images/word_image29.jpg" src="../../_images/word_image29.jpg" style="width: 361px;" />
+<ol class="arabic">
+<li><p>Go to the “Script/Log” panel in EDR208.</p>
+<a class="reference internal image-reference" href="../../_images/word_image29.jpg"><img alt="Script/Log panel in EDR208" class="align-center" src="../../_images/word_image29.jpg" style="height: 400px;" />
 </a>
-<ol class="arabic simple" start="2">
-<li><p>Press “Open Log file” and create a Log file in a folder you desire, ideally calling it something like “Start_1069_Log”. This will just save some commands so you get information about the sampling rate you chose, the temperature and voltage in the beginning and the moment where you started the recording that can be important when working with the data.</p></li>
-<li><p>Press “Send” and select the file “Svalbard_START_rec” in the “Trilobit”-folder.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image30.png"><img alt="../../_images/word_image30.png" src="../../_images/word_image30.png" style="width: 347px;" />
+</li>
+<li><p>Press “Open Log File” and create a log file in a folder of your choice, ideally with a name like “Start_1069_Log”. The log file saves the commands and their output, so you keep a record of the chosen sampling rate, the temperature and voltage at the start, and the exact time the recording started. This is important when you work with the data later.</p></li>
+<li><p>Press “Send” and select the file “Svalbard_START_rec” in the “Trilobit” folder.</p>
+<a class="reference internal image-reference" href="../../_images/word_image30.png"><img alt="Selecting the start script" class="align-center" src="../../_images/word_image30.png" style="height: 400px;" />
 </a>
-<ol class="arabic simple" start="4">
-<li><p>Finally Set the <em>Seconds Delay between each Script Command</em> to “2”. This will make sure that all scripts for starting and operating the Trilobit will be read in correctly.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image31.jpg"><img alt="../../_images/word_image31.jpg" src="../../_images/word_image31.jpg" style="width: 349px;" />
+</li>
+<li><p>Set <em>Seconds Delay between each Script Command</em> to “2”. This makes sure that all script commands for starting the Trilobit are read in correctly.</p>
+<a class="reference internal image-reference" href="../../_images/word_image31.jpg"><img alt="Setting the delay between script commands" class="align-center" src="../../_images/word_image31.jpg" style="height: 400px;" />
 </a>
-<ol class="arabic simple" start="5">
-<li><p>Press “Send” and <strong>wait</strong> until you get this output about 3 times:</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/word_image32.jpg"><img alt="../../_images/word_image32.jpg" src="../../_images/word_image32.jpg" style="width: 395px;" />
+</li>
+<li><p>Press “Send” and <strong>wait</strong> until this output has appeared about three times:</p>
+<a class="reference internal image-reference" href="../../_images/word_image32.jpg"><img alt="Output after starting the recording" class="align-center" src="../../_images/word_image32.jpg" style="height: 400px;" />
 </a>
-<ol class="arabic simple" start="6">
-<li><p>Your Trilobit is now running and you can press “Close Log File”. To double check you can go into the start panel “EDR Cmd” and “Send” “Inq_Recording”, which will show you again if the recording is active (in UTC).</p></li>
-<li><p>You can now lift up the R-Puck and either start programming the next Trilobit or turn of the control unit and your laptop.</p></li>
+</li>
+<li><p>The Trilobit is now recording, and you can press “Close Log File”. To double-check, go to the “EDR Cmd” panel, press “Send” and choose “Inq_Recording”. This shows whether the recording is active and when it started (in UTC).</p></li>
+<li><p>Lift off the R-Puck. You can now either program the next Trilobit or switch off the control unit and the laptop.</p></li>
 </ol>
 <div class="tip admonition">
-<p class="admonition-title">Just for Your Reference</p>
-<p>I would recommend that you write down the <strong>start time</strong> yourself and especially the <strong>deployment</strong>- and the <strong>pick-up</strong> time. You will need that for your data processing.</p>
+<p class="admonition-title">Note the Times</p>
+<p>Write down the <strong>start time</strong> of the recording yourself, and especially the <strong>deployment</strong> and <strong>recovery</strong> times. You will need them for the data processing.</p>
 </div>
 </section>
 
