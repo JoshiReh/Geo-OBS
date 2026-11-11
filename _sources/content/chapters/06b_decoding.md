@@ -31,6 +31,8 @@ You can open EDR208 several times and run several decodings at once to reduce th
 
 ## How to Continue
 
+There are two ways to continue. EDR is the intended route, built by the manufacturer for processing Trilobit data. The Trilobit Processor app automates all of the following steps and is therefore much faster, but it is still in beta.
+
 `````{grid} 1 2 2 2
 :gutter: 3
 
@@ -45,7 +47,7 @@ Continue with **EDR**, the original software built for processing OBS data.
 :link: 10_app_route
 :link-type: ref
 
-Continue with the beta of the **Trilobit Processor**, which tries to automate all steps from EDR.
+Continue with the **Trilobit Processor** app, which does all of the following steps in one go.
 ````
 
 `````
