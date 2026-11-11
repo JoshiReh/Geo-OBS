@@ -14,7 +14,7 @@ A Trilobit weighs **54 kg** in air. Always lift and carry it with **at least two
 
 - A-frame (lifting frame for the Trilobit) with hooks
 - 3 m rope between the A-frame and the weight
-- Weight: 2 chains of 3 kg each
+- Weight: 2 chains of 6 kg each
 - Main rope: 1.5 × water depth
 - Buoy
 - Crane or, better, a winch (the same winch as for CTD casts works well)
@@ -24,19 +24,27 @@ A Trilobit weighs **54 kg** in air. Always lift and carry it with **at least two
 
 Ideally, start the recording of the Trilobits on land before the cruise, as described in {ref}`04_start_recording`. Depending on the size of the vessel, there may be no good place on board to connect the Trilobits to the laptop and the control unit. It is perfectly fine to deploy them on the next day or even two days later. Just make sure to write down the start time of the recording.
 
-Look at the **bathymetry** of the deployment area before the cruise and write down the water depth at each planned position, because it determines the rope length. Prepare the ropes generously long and cut them to length during the deployment. In our case, the water depth was about 30 m, so we prepared 60 m segments and cut off the rest on deck.
+Look at the **bathymetry** of the deployment area before the cruise and write down the water depth at each planned position, because it determines the rope length. Prepare the ropes in set segments; this makes it easier to shorten them during the deployment. For example, when you deploy in a shallow bay of around 30 m water depth, take 60 m segments and simply count the metres you have to cut off.
 
 ## Setting Up the Mooring
 
 The Trilobit is deployed on a simple mooring. From the bottom to the top it looks like this:
 
 1. **A-frame on the Trilobit.** Attach the A-frame to the Trilobit with its hooks at the **three outer bolts** of the housing.
-2. **3 m rope to the weight.** Tie a 3 m rope from the top of the A-frame to the weight (2 chains of 3 kg each).
+2. **3 m rope to the weight.** Tie a 3 m rope from the top of the A-frame to the weight (2 chains of 6 kg each).
 3. **Main rope to the buoy.** From the weight, run the main rope up to the buoy. Its length should be **1.5 × the water depth**.
 
 ```{admonition} Example: 30 m Water Depth
 :class: note
 3 m (A-frame to weight) + 30 m (water depth) + 15 m (50 % extra) = **48 m of rope in total**.
+```
+
+```{figure} assets/mooring_sketch.svg
+:name: fig_mooring
+:width: 600px
+:align: center
+
+Sketch of the mooring (not to scale).
 ```
 
 ```{admonition} Why the Weight?
