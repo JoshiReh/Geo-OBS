@@ -73,8 +73,3 @@ An OBS record is simply a long, continuous recording of everything that moves th
 - **Ocean and weather noise.** Waves, swell and storms generate a continuous background noise whose level can itself be the signal of interest.
 - **Ships and other man-made sources.** Passing vessels are clearly visible on the hydrophone channel and often have to be removed before further analysis.
 - **Active-source experiments.** If an air gun or another controlled source is fired during the deployment, the Trilobit records the reflected and refracted waves, and the data can be used to image the structure below the seafloor.
-
-```{admonition} Under Construction
-:class: warning
-This introduction is still being extended. Pictures of the instrument and of example recordings will be added.
-```

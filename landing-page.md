@@ -25,15 +25,6 @@ Geo-OBS is **open for everyone to follow online**. It is meant as an open refere
 
 The instructions are given step by step and in great detail. Please follow each and every step precisely.
 
-```{admonition} Usage Restrictions
-:class: important
-The Trilobit units used at UNIS were given free of charge to the University of Bergen (UiB) by Seabed Geosolutions (now merged with PxGeo). According to this agreement, the Trilobits:
-
-- may be used for **academic research only**,
-- may only be deployed in **Norwegian waters** (including Svalbard),
-- must **not be dismantled** to use parts for other purposes.
-```
-
 ### Course Content
 
 Geo-OBS is split into several sessions:
