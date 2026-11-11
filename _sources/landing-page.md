@@ -2,6 +2,12 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
+```{admonition} Under Construction
+:class: danger
+Geo-OBS is still under construction. Some chapters are incomplete and will be extended. Feedback is welcome!
+```
+
+
 ## Operating Trilobit Ocean Bottom Seismometers
 
 ````{margin} Based on Geo-UAV
@@ -12,11 +18,6 @@ The structure of this manual is based on the UNIS compendium
 ````
 
 This manual is designed for teaching students, as well as scientific and technical staff, how to prepare, deploy and recover Trilobit ocean bottom seismometers (OBS) and how to process the recorded data.
-
-```{admonition} Under Construction
-:class: warning
-Geo-OBS is still under construction. Some chapters are incomplete and will be extended. Feedback is welcome!
-```
 
 ### About Geo-OBS
 
