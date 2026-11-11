@@ -61,12 +61,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapters/08b_xyz_conversion';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Cutting Long-Term SEG-Y Files into Daily Files" href="08c_segy_daily.html" />
-    <link rel="prev" title="Binary Header Correction for GeoGiga" href="08a_binary_header.html" />
+    <link rel="prev" title="Export Check and Binary Header Correction" href="08a_binary_header.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -251,7 +253,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Export Check and Binary Header Correction</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">X, Y, Z Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08c_segy_daily.html">Cutting Long-Term SEG-Y Files into Daily Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08d_segy_qc.html">SEG-Y QC Explorer</a></li>
@@ -482,12 +484,32 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="x-y-z-conversion">
 <span id="xyz-conversion"></span><h1>X, Y, Z Conversion<a class="headerlink" href="#x-y-z-conversion" title="Link to this heading">#</a></h1>
-<p>The three geophones of the Trilobit are mounted in a Galperin configuration: each sensor is tilted by 54.7° from the vertical. The recorded channels g1, g2 and g3 therefore have to be converted into the conventional x, y and z components. This notebook does that conversion.</p>
-<p>The background, including the exact orientation and polarity of the sensors in the Trilobit and the conversion matrix, is described in the manufacturer’s note <a class="reference download internal" download="" href="../../_downloads/77a31a30774ac4aef2ae7b910fe20904/Trilobit_galperin_configuration.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Trilobit</span> <span class="pre">geophone</span> <span class="pre">configurations</span> <span class="pre">(PDF)</span></code></a>.</p>
-<div class="warning admonition">
-<p class="admonition-title">Under Construction</p>
-<p>The notebook for this step will be added soon.</p>
+<p>Notebook: <a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/blob/main/notebooks/2_fix_header_and_xyz.ipynb">2_fix_header_and_xyz.ipynb</a> (the same notebook as the header correction, see <a class="reference internal" href="08a_binary_header.html#binary-header"><span class="std std-ref">Export Check and Binary Header Correction</span></a>)</p>
+<p>The three geophones of the Trilobit are mounted in a Galperin configuration: each sensor is tilted by 54.7° from the vertical, and the three sensors are 120° apart in the horizontal plane. None of them measures vertical or horizontal motion directly. The recorded channels g1, g2 and g3 are therefore converted into the conventional x, y and z components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} x \\ y \\ z \end{pmatrix} =
+\begin{pmatrix}
+-\sin 54.7^\circ &amp; \sin 54.7^\circ \cos 60^\circ &amp; \sin 54.7^\circ \cos 60^\circ \\
+0 &amp; -\sin 54.7^\circ \cos 30^\circ &amp; \sin 54.7^\circ \cos 30^\circ \\
+\cos 54.7^\circ &amp; \cos 54.7^\circ &amp; \cos 54.7^\circ
+\end{pmatrix}
+\begin{pmatrix} g_1 \\ g_2 \\ g_3 \end{pmatrix}
+\end{split}\]</div>
+<p>With numbers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.81650</span> <span class="o">*</span> <span class="n">g1</span> <span class="o">+</span> <span class="mf">0.40825</span> <span class="o">*</span> <span class="p">(</span><span class="n">g2</span> <span class="o">+</span> <span class="n">g3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span>  <span class="mf">0.70711</span> <span class="o">*</span> <span class="p">(</span><span class="n">g3</span> <span class="o">-</span> <span class="n">g2</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span>  <span class="mf">0.57735</span> <span class="o">*</span> <span class="p">(</span><span class="n">g1</span> <span class="o">+</span> <span class="n">g2</span> <span class="o">+</span> <span class="n">g3</span><span class="p">)</span>
+</pre></div>
 </div>
+<ul class="simple">
+<li><p><strong>x</strong> points along geophone 1,</p></li>
+<li><p><strong>z</strong> is positive <strong>downward</strong> (the seismic convention),</p></li>
+<li><p>x, y and z form a right-handed system.</p></li>
+</ul>
+<p>x and y are still in the frame of the instrument. Where north and east are depends on how the Trilobit landed on the seafloor; finding this orientation is a separate step.</p>
+<p>The hydrophone (h1) is not converted. It only gets the header correction and is saved as <code class="docutils literal notranslate"><span class="pre">_h.segy</span></code>.</p>
+<p>The background, including the exact orientation and polarity of the sensors in the Trilobit and the derivation of the matrix, is described in the manufacturer’s note <a class="reference download internal" download="" href="../../_downloads/77a31a30774ac4aef2ae7b910fe20904/Trilobit_galperin_configuration.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Trilobit</span> <span class="pre">geophone</span> <span class="pre">configurations</span> <span class="pre">(PDF)</span></code></a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -526,7 +548,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Binary Header Correction for GeoGiga</p>
+        <p class="prev-next-title">Export Check and Binary Header Correction</p>
       </div>
     </a>
     <a class="right-next"

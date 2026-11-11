@@ -61,11 +61,13 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/chapters/08_python_processing';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Binary Header Correction for GeoGiga" href="08a_binary_header.html" />
+    <link rel="next" title="Export Check and Binary Header Correction" href="08a_binary_header.html" />
     <link rel="prev" title="Displaying the Data" href="06d_displaying.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -156,6 +158,10 @@
     </div>
   
 
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
   
 </div>
 
@@ -251,7 +257,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Processing the Data with Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Export Check and Binary Header Correction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08b_xyz_conversion.html">X, Y, Z Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08c_segy_daily.html">Cutting Long-Term SEG-Y Files into Daily Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08d_segy_qc.html">SEG-Y QC Explorer</a></li>
@@ -455,7 +461,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -471,6 +479,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-structure">Folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need">What you need</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -482,17 +499,68 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="processing-the-data-with-python">
 <span id="python-processing"></span><h1>Processing the Data with Python<a class="headerlink" href="#processing-the-data-with-python" title="Link to this heading">#</a></h1>
-<p>This session explains the Python notebooks that are used to process the Trilobit data after decoding and cleaning:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="08a_binary_header.html#binary-header"><span class="std std-ref">Binary Header Correction for GeoGiga</span></a></p></li>
-<li><p><a class="reference internal" href="08b_xyz_conversion.html#xyz-conversion"><span class="std std-ref">X, Y, Z Conversion</span></a></p></li>
-<li><p><a class="reference internal" href="08c_segy_daily.html#segy-daily"><span class="std std-ref">Cutting Long-Term SEG-Y Files into Daily Files</span></a></p></li>
-<li><p><a class="reference internal" href="08d_segy_qc.html#segy-qc"><span class="std std-ref">SEG-Y QC Explorer</span></a></p></li>
-</ul>
-<div class="warning admonition">
-<p class="admonition-title">Under Construction</p>
-<p>The notebooks are being cleaned up and will be added soon.</p>
+<p>After decoding and converting the data to SEG-Y in EDR (Session 5), the files still need a few Python steps before you can work with them. Each step is one Jupyter notebook. You only have to change the cell <strong>Settings</strong> at the top of each notebook, then run all cells from top to bottom.</p>
+<p>All notebooks are in the folder <a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/tree/main/notebooks">notebooks</a> of the trilobit-processor repository on GitHub, next to the app (<a class="reference internal" href="10_app_route.html#app-route"><span class="std std-ref">Alternative: The Trilobit Processor App</span></a>). Open a notebook there and use the download button (<em>Download raw file</em>), or clone the whole repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/JoshiReh/trilobit-processor.git</span></code>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Notebook</p></th>
+<th class="head"><p>What it does</p></th>
+<th class="head"><p>Chapter</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/blob/main/notebooks/1_check_edr_export.ipynb">1_check_edr_export.ipynb</a></p></td>
+<td><p>Checks the EDR export for gaps and wrong clock skew</p></td>
+<td><p><a class="reference internal" href="08a_binary_header.html#binary-header"><span class="std std-ref">Export Check and Binary Header Correction</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/blob/main/notebooks/2_fix_header_and_xyz.ipynb">2_fix_header_and_xyz.ipynb</a></p></td>
+<td><p>Repairs the binary header and converts g1/g2/g3 to x/y/z</p></td>
+<td><p><a class="reference internal" href="08a_binary_header.html#binary-header"><span class="std std-ref">Export Check and Binary Header Correction</span></a>, <a class="reference internal" href="08b_xyz_conversion.html#xyz-conversion"><span class="std std-ref">X, Y, Z Conversion</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/blob/main/notebooks/3_cut_daily_files.ipynb">3_cut_daily_files.ipynb</a></p></td>
+<td><p>Joins the chunks and cuts them into daily files</p></td>
+<td><p><a class="reference internal" href="08c_segy_daily.html#segy-daily"><span class="std std-ref">Cutting Long-Term SEG-Y Files into Daily Files</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/blob/main/notebooks/4_qc_daily_files.ipynb">4_qc_daily_files.ipynb</a></p></td>
+<td><p>Plots one day to check the data quality</p></td>
+<td><p><a class="reference internal" href="08d_segy_qc.html#segy-qc"><span class="std std-ref">SEG-Y QC Explorer</span></a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
+<section id="folder-structure">
+<h2>Folder structure<a class="headerlink" href="#folder-structure" title="Link to this heading">#</a></h2>
+<p>The notebooks expect one folder per station, with one subfolder per exported chunk:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DATA_FOLDER/
+├── 0498/
+│   ├── 1stChunk/   0498_1stChunk_seq1.g1_segy, ..._g2_segy, ..._g3_segy, ..._h1_segy, ..._seq1.txt
+│   ├── 2ndChunk/
+│   ├── 3rdChunk/
+│   └── DailyChunk/ (written in step 3)
+├── 0578/
+...
+</pre></div>
+</div>
+</section>
+<section id="what-you-need">
+<h2>What you need<a class="headerlink" href="#what-you-need" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Python 3 with <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>. With conda:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>trilobit<span class="w"> </span>python<span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>jupyterlab
+conda<span class="w"> </span>activate<span class="w"> </span>trilobit
+jupyter<span class="w"> </span>lab
+</pre></div>
+</div>
+</li>
+<li><p>Enough free disk space: step 2 writes four new files of the same size as the EDR files (about 1.7 GB per file for 10 days). The EDR files are only deleted when you ask for it.</p></li>
+<li><p>An external drive is fine. The notebooks read the files in small blocks, so 8 GB of RAM are enough (step 4 needs about 2 GB for one day).</p></li>
+</ul>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -541,7 +609,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Binary Header Correction for GeoGiga</p>
+        <p class="prev-next-title">Export Check and Binary Header Correction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -551,6 +619,24 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-structure">Folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need">What you need</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

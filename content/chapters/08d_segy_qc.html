@@ -251,7 +251,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Export Check and Binary Header Correction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08b_xyz_conversion.html">X, Y, Z Conversion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08c_segy_daily.html">Cutting Long-Term SEG-Y Files into Daily Files</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">SEG-Y QC Explorer</a></li>
@@ -482,10 +482,26 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="seg-y-qc-explorer">
 <span id="segy-qc"></span><h1>SEG-Y QC Explorer<a class="headerlink" href="#seg-y-qc-explorer" title="Link to this heading">#</a></h1>
-<p>This notebook is used to check the quality of the SEG-Y files.</p>
-<div class="warning admonition">
-<p class="admonition-title">Under Construction</p>
-<p>The notebook for this step will be added soon.</p>
+<p>Notebook: <a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/blob/main/notebooks/4_qc_daily_files.ipynb">4_qc_daily_files.ipynb</a></p>
+<p>This notebook shows one day of one station and one component, so you can check that the data look like real seismic data and that the times are right. It reads the daily files from <a class="reference internal" href="08c_segy_daily.html#segy-daily"><span class="std std-ref">Cutting Long-Term SEG-Y Files into Daily Files</span></a>.</p>
+<p>In the cell <strong>Settings</strong> choose:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">STATION</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">&quot;0498&quot;</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">COMPONENT</span></code>: <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code> (geophones) or <code class="docutils literal notranslate"><span class="pre">&quot;h&quot;</span></code> (hydrophone),</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TIME_LOCAL</span></code>: any time inside the day you want to see, in local time. The Trilobit records in UTC; <code class="docutils literal notranslate"><span class="pre">UTC_OFFSET_HOURS</span> <span class="pre">=</span> <span class="pre">2</span></code> converts to Svalbard summer time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZOOM_MINUTES</span></code> and <code class="docutils literal notranslate"><span class="pre">FILTER_HZ</span></code> for the zoomed plots and the bandpass filter.</p></li>
+</ul>
+<p>The notebook finds the right daily file by reading the trace times and prints how many traces contain no data at all. Then it plots:</p>
+<ol class="arabic simple">
+<li><p><strong>Raster plot of the whole day.</strong> One row per 60 s trace, one pixel per second, color = loudness (RMS amplitude, log scale). Look for black rows (missing data), sudden jumps in the noise level and long noisy periods (ships, weather, tides).</p></li>
+<li><p><strong>Wiggle plot</strong> of a few minutes around <code class="docutils literal notranslate"><span class="pre">TIME_LOCAL</span></code>. Every trace is scaled to its own maximum, so you see the shape of the signals. Real ground motion is smooth with clear onsets; spikes of a single sample or flat lines are not data.</p></li>
+<li><p><strong>Spectrogram</strong> of the same minutes: which frequencies carry the energy. Constant horizontal lines are usually technical noise.</p></li>
+<li><p>The raster and wiggle plots again after a <strong>bandpass filter</strong> (default 3-30 Hz).</p></li>
+</ol>
+<p>The notebook on GitHub already shows the plots of station 0498, component z, on 9 July 2026, as an example of what good data look like.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Geophone data often have a large constant offset (for 0498 z about -42 000 counts). This is normal. The raster plot removes the mean of every trace, and the bandpass filter removes it as well.</p>
 </div>
 </section>
 

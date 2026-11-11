@@ -157,6 +157,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -251,7 +255,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">SESSION 6 - Processing with Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="08_python_processing.html">Processing the Data with Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Binary Header Correction for GeoGiga</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08a_binary_header.html">Export Check and Binary Header Correction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08b_xyz_conversion.html">X, Y, Z Conversion</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Cutting Long-Term SEG-Y Files into Daily Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08d_segy_qc.html">SEG-Y QC Explorer</a></li>
@@ -455,7 +459,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -471,6 +477,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-time-is-kept-right">How the time is kept right</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -482,11 +496,32 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="cutting-long-term-seg-y-files-into-daily-files">
 <span id="segy-daily"></span><h1>Cutting Long-Term SEG-Y Files into Daily Files<a class="headerlink" href="#cutting-long-term-seg-y-files-into-daily-files" title="Link to this heading">#</a></h1>
-<p>This notebook cuts a long-term SEG-Y recording into one file per day.</p>
-<div class="warning admonition">
-<p class="admonition-title">Under Construction</p>
-<p>The notebook for this step will be added soon.</p>
+<p>Notebook: <a class="reference external" href="https://github.com/JoshiReh/trilobit-processor/blob/main/notebooks/3_cut_daily_files.ipynb">3_cut_daily_files.ipynb</a></p>
+<p>After step 2 every station has one file per component and per chunk folder, each about 1.7 GB for 10 days. Most analyses look at a few hours or one day, and reading 1.7 GB to plot one hour is slow. This notebook joins the chunk folders of a station (<code class="docutils literal notranslate"><span class="pre">1stChunk</span></code>, <code class="docutils literal notranslate"><span class="pre">2ndChunk</span></code>, …) into one continuous recording and cuts it into files of one day, about 170 MB each:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">station</span><span class="o">&gt;/</span><span class="n">DailyChunk</span><span class="o">/&lt;</span><span class="n">station</span><span class="o">&gt;</span><span class="n">_z_chunk0000_20260707T160000</span><span class="o">.</span><span class="n">segy</span>
+                     <span class="o">&lt;</span><span class="n">station</span><span class="o">&gt;</span><span class="n">_z_chunk0001_20260708T160000</span><span class="o">.</span><span class="n">segy</span>
+                     <span class="o">...</span>
+</pre></div>
 </div>
+<p>The number after <code class="docutils literal notranslate"><span class="pre">chunk</span></code> counts the days from the start time you choose; the date is the start of the file in <strong>UTC</strong>.</p>
+<p>In the cell <strong>Settings</strong> choose:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DATA_FOLDER</span></code> and <code class="docutils literal notranslate"><span class="pre">STATIONS</span></code>, as in step 2,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">COMPONENTS</span></code>: usually all four, <code class="docutils literal notranslate"><span class="pre">[&quot;x&quot;,</span> <span class="pre">&quot;y&quot;,</span> <span class="pre">&quot;z&quot;,</span> <span class="pre">&quot;h&quot;]</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">START_LOCAL</span></code>: the start of the first file in local time. Use the deployment time rounded to the full hour; add some settling time if you want to leave out the first hour on the seafloor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">END_LOCAL</span></code>: <code class="docutils literal notranslate"><span class="pre">None</span></code> for the whole recording, or a time before the recovery,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HOURS_PER_FILE</span></code>: <code class="docutils literal notranslate"><span class="pre">24</span></code> for daily files, <code class="docutils literal notranslate"><span class="pre">1</span></code> for hourly files.</p></li>
+</ul>
+<section id="how-the-time-is-kept-right">
+<h2>How the time is kept right<a class="headerlink" href="#how-the-time-is-kept-right" title="Link to this heading">#</a></h2>
+<p>Every input trace is placed at the time written in its own trace header, not simply appended to the previous one. If a minute is missing (for example between two EDR exports), the output contains zeros there and the notebook prints <code class="docutils literal notranslate"><span class="pre">WARNING:</span> <span class="pre">59</span> <span class="pre">s</span> <span class="pre">without</span> <span class="pre">data</span> <span class="pre">(zeros)</span></code>. If two chunks overlap, the doubled minutes land on the same place.</p>
+<div class="tip admonition">
+<p class="admonition-title">Why this matters</p>
+<p>In 2026 one EDR export started one minute late. An earlier version of this notebook simply joined the traces, so the gap was closed and all later data of that station were 59 s too early. It was only noticed because the earthquake of 27 July 2026 seemed to arrive at that station almost a minute before the others. Always run step 1 (export check) and read the warnings of this notebook.</p>
+</div>
+<p>Only one output file is in memory at a time, so a normal laptop is enough. One station with four components and 27 days takes about 15 to 30 minutes on an external hard drive.</p>
+<p>At the end the notebook plots the noise level and the maximum amplitude of every file. Use it to find quiet days, noisy days and days with large events, and look at them in detail with <a class="reference internal" href="08d_segy_qc.html#segy-qc"><span class="std std-ref">SEG-Y QC Explorer</span></a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -543,6 +578,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-time-is-kept-right">How the time is kept right</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
