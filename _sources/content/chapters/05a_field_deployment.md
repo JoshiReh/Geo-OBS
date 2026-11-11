@@ -30,7 +30,7 @@ Look at the **bathymetry** of the deployment area before the cruise and write do
 
 The Trilobit is deployed on a simple mooring. From the bottom to the top it looks like this:
 
-1. **A-frame on the Trilobit.** Attach the A-frame to the Trilobit with its hooks at the **three outer bolts** of the housing.
+1. **A-frame on the Trilobit.** Attach the A-frame to the Trilobit with its hooks at the **three outer bolts** of the housing. The A-frame is not solid but made of steel wires, so on the seafloor it collapses and rests on top of the Trilobit.
 2. **3 m rope to the weight.** Tie a 3 m rope from the top of the A-frame to the weight (2 chains of 6 kg each).
 3. **Main rope to the buoy.** From the weight, run the main rope up to the buoy. Its length should be **1.5 × the water depth**.
 
@@ -51,7 +51,7 @@ Sketch of the mooring (not to scale).
 :class: tip
 The weight decouples the Trilobit from the rest of the mooring:
 
-- The rope and the A-frame do not rest directly on the instrument, so the Trilobit does not record their **noise** all the time.
+- The weight holds the A-frame down on the Trilobit and keeps the movements of the main rope away from it, so the Trilobit does not record the **noise** of the mooring all the time.
 - When wind or currents pull on the buoy, the buoy drags the **weight** and not the Trilobit, which stays in place on the seafloor.
 ```
 
