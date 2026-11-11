@@ -60,9 +60,8 @@ The weight decouples the Trilobit from the rest of the mooring:
 1. Lift the Trilobit with at least two people to the deployment position on deck.
 2. Hook the A-frame into the crane or winch.
 3. Lower the Trilobit slowly and steadily into the water and down to the seafloor.
-4. As soon as the Trilobit rests on the seafloor, release it from the winch and lower the weight and the main rope after it.
-5. Attach the buoy to the top of the main rope and release it.
-6. Write down the **deployment time** and the **position** (GPS coordinates). You will need them for the recovery and for the data processing.
+4. Attach the buoy to the top of the main rope and release it.
+5. Write down the **deployment time** and the **position** (GPS coordinates). You will need them for the recovery and for the data processing.
 
 ## Picking Up the Trilobit
 
