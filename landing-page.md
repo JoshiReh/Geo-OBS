@@ -13,6 +13,11 @@ The structure of this manual is based on the UNIS compendium
 
 This manual is designed for teaching students, as well as scientific and technical staff, how to prepare, deploy and recover Trilobit ocean bottom seismometers (OBS) and how to process the recorded data.
 
+```{admonition} Under Construction
+:class: warning
+Geo-OBS is still under construction. Some chapters are incomplete and will be extended. Feedback is welcome!
+```
+
 ### About Geo-OBS
 
 Geo-OBS is **open for everyone to follow online**. It is meant as an open reference work for operating Trilobit ocean bottom seismometers in the field.
